@@ -1,0 +1,407 @@
+12/31/2018 07:15:58 PM Application Started
+12/31/2018 07:15:58 PM Config instance prepared
+12/31/2018 07:15:58 PM Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+12/31/2018 07:15:58 PM 
+Attach Event:
+12/31/2018 07:15:58 PM Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+12/31/2018 07:15:58 PM Setting DataInterval to 1000ms
+12/31/2018 07:15:58 PM [Humidity Event] -> Humidity: 41.88
+12/31/2018 07:15:59 PM [Humidity Event] -> Humidity: 41.88
+12/31/2018 07:16:00 PM [Humidity Event] -> Humidity: 41.88
+12/31/2018 07:16:01 PM [Humidity Event] -> Humidity: 41.88
+12/31/2018 07:16:02 PM [Humidity Event] -> Humidity: 41.87
+12/31/2018 07:16:03 PM [Humidity Event] -> Humidity: 41.87
+12/31/2018 07:16:04 PM [Humidity Event] -> Humidity: 41.87
+12/31/2018 07:16:05 PM [Humidity Event] -> Humidity: 41.87
+12/31/2018 07:16:06 PM [Humidity Event] -> Humidity: 41.88
+12/31/2018 07:16:07 PM [Humidity Event] -> Humidity: 41.87
+12/31/2018 07:16:08 PM [Humidity Event] -> Humidity: 41.88
+12/31/2018 07:17:33 PM - root - DEBUG - Application Started
+12/31/2018 07:17:33 PM - phidgetConfig - DEBUG - Config instance prepared
+12/31/2018 07:17:33 PM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+12/31/2018 07:17:33 PM - PhidgetsBase - DEBUG - 
+Attach Event:
+12/31/2018 07:17:33 PM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+12/31/2018 07:17:33 PM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+12/31/2018 07:17:33 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:34 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.9
+12/31/2018 07:17:35 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:36 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:37 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:38 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:39 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:40 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:41 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:42 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+12/31/2018 07:17:43 PM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 41.89
+01/01/2019 09:29:13 AM - root - DEBUG - Application Started
+01/01/2019 09:29:13 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:29:21 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:29:22 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:29:22 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:29:22 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:29:22 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.06
+01/01/2019 09:30:23 AM - root - DEBUG - Application Started
+01/01/2019 09:30:23 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:30:23 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:30:24 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:30:24 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:30:24 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:30:24 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.09
+01/01/2019 09:30:31 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.09
+01/01/2019 09:30:32 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.09
+01/01/2019 09:34:54 AM - root - DEBUG - Application Started
+01/01/2019 09:34:54 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:34:54 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:34:54 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:34:54 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:34:54 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:34:54 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.09
+01/01/2019 09:35:01 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.09
+01/01/2019 09:35:03 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 39.08
+01/01/2019 09:45:47 AM - root - DEBUG - Application Started
+01/01/2019 09:45:47 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:45:47 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:45:47 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:45:47 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:45:47 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:45:47 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.62
+01/01/2019 09:45:47 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:47:16 AM - root - DEBUG - Application Started
+01/01/2019 09:47:16 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:47:16 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:47:17 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:47:17 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:47:17 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:47:17 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:47:17 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:47:17 AM - webClient - DEBUG - Web Client [Humidity] sending info: {'Content-type': 'application/json'} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:47:17.211145", "device": "HumiditySensor"}
+01/01/2019 09:47:54 AM - root - DEBUG - Application Started
+01/01/2019 09:47:54 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:47:54 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:47:55 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:47:55 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:47:55 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:47:55 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.61
+01/01/2019 09:47:55 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:47:55 AM - webClient - DEBUG - Web Client [Humidity] sending info: {'Content-type': 'application/json'} | POST | /humidityLevel | {"humidity": "38.61, "timestamp": "2019-01-01T09:47:55.584270", "device": "HumiditySensor"}
+01/01/2019 09:53:27 AM - root - DEBUG - Application Started
+01/01/2019 09:53:27 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:53:27 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:53:28 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:53:28 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:53:28 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:53:28 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.49
+01/01/2019 09:53:28 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:53:28 AM - webClient - DEBUG - Web Client [Humidity] sending info: {'Content-type': 'application/json'} | POST | /humidityLevel | {"humidity": "38.49, "timestamp": "2019-01-01T09:53:28.360034", "device": "HumiditySensor"}
+01/01/2019 09:55:03 AM - root - DEBUG - Application Started
+01/01/2019 09:55:03 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:55:03 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:55:04 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:55:04 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:55:04 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:55:04 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.54
+01/01/2019 09:55:04 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:55:04 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.54, "timestamp": "2019-01-01T09:55:04.197178", "device": "HumiditySensor"}
+01/01/2019 09:56:30 AM - root - DEBUG - Application Started
+01/01/2019 09:56:30 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:30 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 09:56:31 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 09:56:31 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 09:56:31 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 09:56:31 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:31 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:31 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:31.608972", "device": "HumiditySensor"}
+01/01/2019 09:56:31 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a5390>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a5390>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:32 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:32 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:32 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:32.263596", "device": "HumiditySensor"}
+01/01/2019 09:56:32 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a5828>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a5828>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:33 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:33 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:33 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:33.285742", "device": "HumiditySensor"}
+01/01/2019 09:56:33 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a5b00>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a5b00>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:34 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:34 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:34 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:34.201275", "device": "HumiditySensor"}
+01/01/2019 09:56:34 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a5dd8>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a5dd8>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:35 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:35 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:35 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:35.192817", "device": "HumiditySensor"}
+01/01/2019 09:56:35 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a5ba8>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a5ba8>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:36 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:36 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:36 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:36.255271", "device": "HumiditySensor"}
+01/01/2019 09:56:36 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a58d0>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a58d0>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:37 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:37 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:37 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:37.277155", "device": "HumiditySensor"}
+01/01/2019 09:56:37 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703a5470>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703a5470>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:38 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:38 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:38 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:38.198800", "device": "HumiditySensor"}
+01/01/2019 09:56:38 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703b21d0>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703b21d0>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:39 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:39 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:39 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:39.529978", "device": "HumiditySensor"}
+01/01/2019 09:56:39 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703b2390>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703b2390>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:40 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:40 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:40 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:40.350275", "device": "HumiditySensor"}
+01/01/2019 09:56:40 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703b2550>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703b2550>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 09:56:41 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.64
+01/01/2019 09:56:41 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 09:56:41 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.64, "timestamp": "2019-01-01T09:56:41.270684", "device": "HumiditySensor"}
+01/01/2019 09:56:41 AM - webClient - DEBUG - Web Client [humidity] sender response: {'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'length': 1155, 'headers': <http.client.HTTPMessage object at 0x7f89703b2710>, '_method': 'POST', 'version': 11, 'will_close': False, 'code': 400, 'reason': 'Bad Request', 'status': 400, 'msg': <http.client.HTTPMessage object at 0x7f89703b2710>, 'chunked': False, 'chunk_left': 'UNKNOWN'}
+01/01/2019 10:03:10 AM - root - DEBUG - Application Started
+01/01/2019 10:03:10 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:10 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 10:03:10 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 10:03:10 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 10:03:10 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 10:03:11 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.73
+01/01/2019 10:03:11 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:11 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.73, "timestamp": "2019-01-01T10:03:11.023310", "device": "HumiditySensor"}
+01/01/2019 10:03:11 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c140358>, 'headers': <http.client.HTTPMessage object at 0x7fee6c140358>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:11 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.72
+01/01/2019 10:03:11 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:11 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.72, "timestamp": "2019-01-01T10:03:11.831968", "device": "HumiditySensor"}
+01/01/2019 10:03:11 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c1407f0>, 'headers': <http.client.HTTPMessage object at 0x7fee6c1407f0>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:12 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.73
+01/01/2019 10:03:12 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:12 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.73, "timestamp": "2019-01-01T10:03:12.856036", "device": "HumiditySensor"}
+01/01/2019 10:03:12 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c140ac8>, 'headers': <http.client.HTTPMessage object at 0x7fee6c140ac8>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:13 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.72
+01/01/2019 10:03:13 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:13 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.72, "timestamp": "2019-01-01T10:03:13.878221", "device": "HumiditySensor"}
+01/01/2019 10:03:13 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c140da0>, 'headers': <http.client.HTTPMessage object at 0x7fee6c140da0>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:14 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.72
+01/01/2019 10:03:14 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:14 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.72, "timestamp": "2019-01-01T10:03:14.901828", "device": "HumiditySensor"}
+01/01/2019 10:03:14 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c140a90>, 'headers': <http.client.HTTPMessage object at 0x7fee6c140a90>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:15 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.73
+01/01/2019 10:03:15 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:15 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.73, "timestamp": "2019-01-01T10:03:15.825723", "device": "HumiditySensor"}
+01/01/2019 10:03:15 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c1402e8>, 'headers': <http.client.HTTPMessage object at 0x7fee6c1402e8>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:16 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.73
+01/01/2019 10:03:16 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:16 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.73, "timestamp": "2019-01-01T10:03:16.847466", "device": "HumiditySensor"}
+01/01/2019 10:03:16 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c14d2e8>, 'headers': <http.client.HTTPMessage object at 0x7fee6c14d2e8>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:17 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.73
+01/01/2019 10:03:17 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:17 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.73, "timestamp": "2019-01-01T10:03:17.976255", "device": "HumiditySensor"}
+01/01/2019 10:03:17 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c14d4a8>, 'headers': <http.client.HTTPMessage object at 0x7fee6c14d4a8>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:18 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.74
+01/01/2019 10:03:18 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:18 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.74, "timestamp": "2019-01-01T10:03:18.895326", "device": "HumiditySensor"}
+01/01/2019 10:03:18 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c14d668>, 'headers': <http.client.HTTPMessage object at 0x7fee6c14d668>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:19 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.74
+01/01/2019 10:03:19 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:19 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.74, "timestamp": "2019-01-01T10:03:19.817352", "device": "HumiditySensor"}
+01/01/2019 10:03:19 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c14d828>, 'headers': <http.client.HTTPMessage object at 0x7fee6c14d828>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:20 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.73
+01/01/2019 10:03:20 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:20 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.73, "timestamp": "2019-01-01T10:03:20.848803", "device": "HumiditySensor"}
+01/01/2019 10:03:20 AM - webClient - DEBUG - Web Client [humidity] sender response: {'version': 11, 'length': 1155, 'code': 400, 'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7fee6c14d9e8>, 'headers': <http.client.HTTPMessage object at 0x7fee6c14d9e8>, '_method': 'POST', 'debuglevel': 0, 'reason': 'Bad Request', 'status': 400, 'chunked': False, 'will_close': False, 'fp': <_io.BufferedReader name=17>}
+01/01/2019 10:03:47 AM - root - DEBUG - Application Started
+01/01/2019 10:03:47 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:47 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 10:03:48 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 10:03:48 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 10:03:48 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 10:03:48 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:48 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:48 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:48.477731", "device": "HumiditySensor"}
+01/01/2019 10:03:48 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb426c390>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb426c390>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:49 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:49 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:49 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:49.272338", "device": "HumiditySensor"}
+01/01/2019 10:03:49 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb426c828>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb426c828>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:50 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:50 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:50 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:50.369545", "device": "HumiditySensor"}
+01/01/2019 10:03:50 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb426cb00>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb426cb00>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:51 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:51 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:51 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:51.267568", "device": "HumiditySensor"}
+01/01/2019 10:03:51 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb426cdd8>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb426cdd8>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:52 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:52 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:52 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:52.267079", "device": "HumiditySensor"}
+01/01/2019 10:03:52 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb426cac8>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb426cac8>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:53 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:53 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:53 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:53.304317", "device": "HumiditySensor"}
+01/01/2019 10:03:53 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb426c320>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb426c320>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:54 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:54 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:54 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:54.326317", "device": "HumiditySensor"}
+01/01/2019 10:03:54 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb4279320>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb4279320>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:55 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:55 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:55 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:55.352603", "device": "HumiditySensor"}
+01/01/2019 10:03:55 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb42794e0>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb42794e0>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:56 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:56 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:56 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:56.263138", "device": "HumiditySensor"}
+01/01/2019 10:03:56 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb42796a0>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb42796a0>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:57 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:57 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:57 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:57.260284", "device": "HumiditySensor"}
+01/01/2019 10:03:57 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb4279860>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb4279860>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:03:58 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.83
+01/01/2019 10:03:58 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:03:58 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.83, "timestamp": "2019-01-01T10:03:58.261166", "device": "HumiditySensor"}
+01/01/2019 10:03:58 AM - webClient - DEBUG - Web Client [humidity] sender response: {'headers': <http.client.HTTPMessage object at 0x7efdb4279a20>, 'reason': 'Bad Request', '_method': 'POST', 'version': 11, 'length': 1155, 'chunked': False, 'code': 400, 'msg': <http.client.HTTPMessage object at 0x7efdb4279a20>, 'will_close': False, 'chunk_left': 'UNKNOWN', 'fp': <_io.BufferedReader name=17>, 'debuglevel': 0, 'status': 400}
+01/01/2019 10:05:29 AM - root - DEBUG - Application Started
+01/01/2019 10:05:29 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:29 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 10:05:30 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 10:05:30 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 10:05:30 AM - PhidgetsBase - DEBUG - Setting DataInterval to 1000ms
+01/01/2019 10:05:30 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.86
+01/01/2019 10:05:30 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:30 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.86", "timestamp": "2019-01-01T10:05:30.495382", "device": "HumiditySensor"}
+01/01/2019 10:05:30 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db419b400>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db419b400>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:31 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.86
+01/01/2019 10:05:31 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:31 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.86", "timestamp": "2019-01-01T10:05:31.303147", "device": "HumiditySensor"}
+01/01/2019 10:05:31 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db419b8d0>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db419b8d0>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:32 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.87
+01/01/2019 10:05:32 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:32 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.87", "timestamp": "2019-01-01T10:05:32.326776", "device": "HumiditySensor"}
+01/01/2019 10:05:32 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db419bbe0>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db419bbe0>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:33 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.87
+01/01/2019 10:05:33 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:33 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.87", "timestamp": "2019-01-01T10:05:33.450904", "device": "HumiditySensor"}
+01/01/2019 10:05:33 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db419bef0>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db419bef0>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:34 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.87
+01/01/2019 10:05:34 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:34 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.87", "timestamp": "2019-01-01T10:05:34.372562", "device": "HumiditySensor"}
+01/01/2019 10:05:34 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db419b940>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db419b940>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:35 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.87
+01/01/2019 10:05:35 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:35 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.87", "timestamp": "2019-01-01T10:05:35.289529", "device": "HumiditySensor"}
+01/01/2019 10:05:35 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db419b588>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db419b588>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:36 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.88
+01/01/2019 10:05:36 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:36 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.88", "timestamp": "2019-01-01T10:05:36.317630", "device": "HumiditySensor"}
+01/01/2019 10:05:36 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db41a7278>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db41a7278>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:37 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.87
+01/01/2019 10:05:37 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:37 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.87", "timestamp": "2019-01-01T10:05:37.285695", "device": "HumiditySensor"}
+01/01/2019 10:05:37 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db41a7470>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db41a7470>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:38 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.88
+01/01/2019 10:05:38 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:38 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.88", "timestamp": "2019-01-01T10:05:38.366203", "device": "HumiditySensor"}
+01/01/2019 10:05:38 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db41a7668>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db41a7668>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:39 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.89
+01/01/2019 10:05:39 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:39 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.89", "timestamp": "2019-01-01T10:05:39.287658", "device": "HumiditySensor"}
+01/01/2019 10:05:39 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db41a7860>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db41a7860>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:05:40 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.88
+01/01/2019 10:05:40 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:05:40 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.88", "timestamp": "2019-01-01T10:05:40.311772", "device": "HumiditySensor"}
+01/01/2019 10:05:40 AM - webClient - DEBUG - Web Client [humidity] sender response: {'length': 87, 'will_close': False, 'msg': <http.client.HTTPMessage object at 0x7f2db41a7a58>, 'status': 200, 'chunked': False, 'headers': <http.client.HTTPMessage object at 0x7f2db41a7a58>, 'reason': 'OK', 'chunk_left': 'UNKNOWN', 'code': 200, 'version': 11, 'fp': <_io.BufferedReader name=17>, '_method': 'POST', 'debuglevel': 0}
+01/01/2019 10:11:01 AM - root - DEBUG - Application Started
+01/01/2019 10:11:01 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:11:01 AM - PhidgetsBase - INFO - Added Server  having name of PhidgetSBC with intent to control device HumiditySensor to the Phidget channel registry
+01/01/2019 10:11:01 AM - PhidgetsBase - DEBUG - 
+Attach Event:
+01/01/2019 10:11:01 AM - PhidgetsBase - DEBUG - Device Attached!
+	-> Channel Class: PhidgetHumiditySensor
+	-> Serial Number: 512594
+	-> Hub Port: 3
+	-> Channel:  0
+
+01/01/2019 10:11:01 AM - PhidgetsBase - DEBUG - Setting DataInterval to 10000ms
+01/01/2019 10:11:01 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.97
+01/01/2019 10:11:01 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:11:01 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.97", "timestamp": "2019-01-01T10:11:01.693462", "device": "HumiditySensor"}
+01/01/2019 10:11:01 AM - webClient - DEBUG - Web Client [humidity] sender response: {'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7f62f822c400>, 'will_close': False, 'debuglevel': 0, 'reason': 'OK', 'length': 87, 'chunked': False, 'code': 200, 'status': 200, 'fp': <_io.BufferedReader name=17>, 'version': 11, '_method': 'POST', 'headers': <http.client.HTTPMessage object at 0x7f62f822c400>}
+01/01/2019 10:11:11 AM - Buildout_Humidity - DEBUG - [Humidity Event] -> Humidity: 38.98
+01/01/2019 10:11:11 AM - phidgetConfig - DEBUG - Config instance prepared
+01/01/2019 10:11:11 AM - webClient - DEBUG - Web Client [Humidity] sending info: {"Content-type": "application/json"} | POST | /humidityLevel | {"humidity": "38.98", "timestamp": "2019-01-01T10:11:11.481007", "device": "HumiditySensor"}
+01/01/2019 10:11:11 AM - webClient - DEBUG - Web Client [humidity] sender response: {'chunk_left': 'UNKNOWN', 'msg': <http.client.HTTPMessage object at 0x7f62f822ca90>, 'will_close': False, 'debuglevel': 0, 'reason': 'OK', 'length': 87, 'chunked': False, 'code': 200, 'status': 200, 'fp': <_io.BufferedReader name=17>, 'version': 11, '_method': 'POST', 'headers': <http.client.HTTPMessage object at 0x7f62f822ca90>}

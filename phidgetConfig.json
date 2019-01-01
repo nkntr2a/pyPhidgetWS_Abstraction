@@ -1,0 +1,174 @@
+{
+  "ipAddress": "192.168.1.211",
+  "isSBC": false,
+  "NetworkDiscovery": true,
+  "passwd": null,
+  "useWWWConnect": false,
+  "isRemoteHost": true,
+  "port": 5661,
+  "timeoutWaitingForAttach": 35000,
+  "deviceList": {
+    "ArmExtenderWiper": {
+      "SerialNumber": 512594,
+      "Channel": 0,
+      "VINTPort": 0,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "VoltageInput",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "GrabberWiper": {
+      "SerialNumber": 512594,
+      "VINTPort": 0,
+      "Channel": 1,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "VoltageInput",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "ArmUpDownStepper": {
+      "SerialNumber": 512594,
+      "Channel": 0,
+      "VINTPort": 2,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "StepperController",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "HumiditySensor": {
+      "SerialNumber": 512594,
+      "Channel": 0,
+      "VINTPort": 3,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "HumiditySensor",
+      "PollInterval": 10000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "TempSensor": {
+      "SerialNumber": 512594,
+      "Channel": 0,
+      "VINTPort": 3,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "TemperatureSensor",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "ArmIn": {
+      "SerialNumber": 530286,
+      "Channel": 0,
+      "VINTPort": 0,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "PowerRelay",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "ArmOut": {
+      "SerialNumber": 530286,
+      "Channel": 1,
+      "VINTPort": 0,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "PowerRelay",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "CloseGripper": {
+      "SerialNumber": 530286,
+      "Channel": 2,
+      "VINTPort": 0,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "PowerRelay",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "OpenGripper": {
+      "SerialNumber": 530286,
+      "Channel": 3,
+      "VINTPort": 0,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "PowerRelay",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "SpinArm": {
+      "SerialNumber": 530286,
+      "Channel": 0,
+      "VINTPort": 3,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "StepperController",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    },
+    "Locomotion": {
+      "SerialNumber": 530286,
+      "Channel": 0,
+      "VINTPort": 5,
+      "ipAddress": "192.168.1.211",
+      "port": 5661,
+      "serverName": "PhidgetSBC",
+      "password": null,
+      "Type": "StepperController",
+      "PollInterval": 1000,
+      "isRemote": 1,
+      "webClientTemplate": "default"
+    }
+  },
+  "webClient": {
+    "default": {
+      "hostName": "127.0.0.1:1880",
+      "headers": "{\"Content-type\": \"application/json\"}",
+      "type": "POST"
+    },
+    "serviceName": {
+      "HumiditySensor": {
+        "reportHumidity": {
+          "servicePath": "humidityLevel"
+        }
+      },
+      "TemperatureSensor": {
+        "reportTemperature": {
+          "servicePath": "temperatureGR"
+        }
+      }
+    }
+  }
+}
