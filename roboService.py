@@ -5,6 +5,7 @@ import time
 import logging
 
 import Buildout_Temperature
+import Buildout_VoltageInput
 
 logging.basicConfig(format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt = '%m/%d/%Y %I:%M:%S %p',
@@ -31,7 +32,12 @@ def index():
 if __name__ == '__main__':
     logging.debug("Application Started")
     humidityObj = Buildout_Humidity.HumiditySensorHandler("HumiditySensor")
+    time.sleep(10)
     temperatureObj = Buildout_Temperature.TemperatureSensorHandler("TemperatureSensor")
     time.sleep(10)
+    extenderObj = Buildout_VoltageInput.VoltageInputSensorHandler("ArmExtenderWiper")
+    time.sleep(10)
+    grabberObj = Buildout_VoltageInput.VoltageInputSensorHandler("GrabberWiper")
+    time.sleep(300)
 
     #app.run(debug=True)

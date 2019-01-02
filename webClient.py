@@ -21,5 +21,6 @@ class WebSender:
         headers = json.loads(header_string)
         connection.request(conn_type, service_path, json_string, headers)
         response = connection.getresponse()
-        log.debug('Web Client [humidity] sender response: ' + str(response.__dict__))
-        print('response = ', response)
+        r = response.__dict__
+        log.debug('Web Client [humidity] sender response: ' + str(r["status"]) + " " + r["_method"] + " " + r["reason"])
+        print('response = ', str(r["status"]))

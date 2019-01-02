@@ -4,6 +4,9 @@ import pystache
 import traceback
 
 import logging
+
+import phidgetConfig
+
 log = logging.getLogger(__name__)
 
 from Phidget22.Devices.HumiditySensor import *
@@ -49,8 +52,9 @@ class HumiditySensorHandler(ConnectServer):
             * HumidityChangeTrigger will affect the frequency of HumidityChange events, by limiting them to only occur when
             * the humidity changes by at least the value set.
             """
-            print("\tSetting Humidity ChangeTrigger to 0.0")
-            ph.setHumidityChangeTrigger(0.0)
+            min_delta = phidgetConfig.ConfigTool.__config__.get_device_config(ph.deviceName, "minimumDelta")
+            print("\tSetting Humidity ChangeTrigger to " + str(min_delta))
+            ph.setHumidityChangeTrigger(min_delta)
 
         except PhidgetException as e:
             print("\nError in Detach Event:")
@@ -76,15 +80,15 @@ class HumiditySensorHandler(ConnectServer):
 
         # If you are unsure how to use more than one Phidget channel with this event, we recommend going to
         # www.phidgets.com/docs/Using_Multiple_Phidgets for information
-
+        device_name = ph.__dict__["deviceName"]
         print("[Humidity Event] -> Humidity: " + str(humidity))
         log.debug("[Humidity Event] -> Humidity: " + str(humidity))
-
+        units = ConnectServer.get_config(None).get_device_config(device_name, "units")
         payload = '{"humidity": "{{humidity}}", "timestamp": "{{dateTime}}", "device": "{{device}}"}'
-        dateTime = datetime.datetime.now().isoformat()
-        jStr = pystache.render(payload, {'humidity': humidity, 'dateTime': dateTime, 'device': 'HumiditySensor'})
+        date_time = datetime.datetime.now().isoformat()
+        jStr = pystache.render(payload, {'humidity': humidity, 'dateTime': date_time, 'device': device_name})
 
-        WebSender("HumiditySensor", "reportHumidity", jStr)
+        WebSender(device_name, units, jStr)
 
     def onErrorHandler(self, errorCode, errorString):
         ph = self

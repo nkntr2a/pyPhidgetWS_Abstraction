@@ -79,19 +79,34 @@ class ConnectServer:
             self.channel_info_object.hubPort = config["deviceList"][device]["VINTPort"]
             self.channel_info_object.isRemote = config["deviceList"][device]["isRemote"]
             self.channel_info_object.ipAddress = config["deviceList"][device]["ipAddress"]
+
     def connect(self, ch, device):
         ch.deviceName = device
         ch.setDeviceSerialNumber(self.channel_info_object.serialNumber)
         ch.setHubPort(self.channel_info_object.hubPort)
         ch.setIsRemote(self.channel_info_object.isRemote)
+        ch.setChannel(self.channel_info_object.channel)
+        msg = "Connecting to device " + device
+        msg += " having Serial Number of " + str(self.channel_info_object.serialNumber)
+        msg += " Channel ID of " + str(self.channel_info_object.channel)
+        msg += " and hub port of " + str(self.channel_info_object.hubPort)
+        print(msg)
+        log.debug(msg)
+        try:
+            Net.addServer(
+                self.cfg.get_device_config(device, "serverName"),
+                self.cfg.get_device_config(device, "ipAddress"),
+                self.cfg.get_device_config(device, "port"),
+                self.cfg.get_device_config(device, "password"),
+                0
+            )
+        except PhidgetException as e:
+            if e.details == 'Duplicate':
+                print("connection handle already exists, not creating another")
+                log.warning("Duplicate Connection to Phidgets Network Server -> Creating TemperatureSensor: " + e.details)
+            else:
+                raise e
 
-        Net.addServer(
-            self.cfg.get_device_config(device, "serverName"),
-            self.cfg.get_device_config(device, "ipAddress"),
-            self.cfg.get_device_config(device, "port"),
-            self.cfg.get_device_config(device, "password"),
-            0
-        )
         log.info("Added Server " + self.cfg.get_device_config(device, "password") + " having name of " +
                  self.cfg.get_device_config(device, "serverName") + " with intent to control device " +
                  device + " to the Phidget channel registry")
@@ -101,7 +116,7 @@ class ConnectServer:
     def init_config(self, cfg=None):
         return phidgetConfig.ConfigTool(cfg)
 
-    def get_config(self):
+    def get_config(self, cfg=None):
         return phidgetConfig.ConfigTool(cfg)
 
     def set_config(self, cfg):

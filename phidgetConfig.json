@@ -18,8 +18,10 @@
       "password": null,
       "Type": "VoltageInput",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Volts"
     },
     "GrabberWiper": {
       "SerialNumber": 512594,
@@ -30,9 +32,11 @@
       "serverName": "PhidgetSBC",
       "password": null,
       "Type": "VoltageInput",
-      "PollInterval": 1000,
+      "PollInterval": 500,
+      "minimumDelta": 0.01,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Volts"
     },
     "ArmUpDownStepper": {
       "SerialNumber": 512594,
@@ -44,8 +48,10 @@
       "password": null,
       "Type": "StepperController",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Degrees"
     },
     "HumiditySensor": {
       "SerialNumber": 512594,
@@ -57,10 +63,12 @@
       "password": null,
       "Type": "HumiditySensor",
       "PollInterval": 10000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Percent RH"
     },
-    "TempSensor": {
+    "TemperatureSensor": {
       "SerialNumber": 512594,
       "Channel": 0,
       "VINTPort": 3,
@@ -69,9 +77,11 @@
       "serverName": "PhidgetSBC",
       "password": null,
       "Type": "TemperatureSensor",
-      "PollInterval": 1000,
+      "PollInterval": 10000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Degrees C"
     },
     "ArmIn": {
       "SerialNumber": 530286,
@@ -83,6 +93,7 @@
       "password": null,
       "Type": "PowerRelay",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default"
     },
@@ -96,6 +107,7 @@
       "password": null,
       "Type": "PowerRelay",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default"
     },
@@ -109,6 +121,7 @@
       "password": null,
       "Type": "PowerRelay",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default"
     },
@@ -122,6 +135,7 @@
       "password": null,
       "Type": "PowerRelay",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default"
     },
@@ -135,8 +149,10 @@
       "password": null,
       "Type": "StepperController",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Degrees"
     },
     "Locomotion": {
       "SerialNumber": 530286,
@@ -148,8 +164,10 @@
       "password": null,
       "Type": "StepperController",
       "PollInterval": 1000,
+      "minimumDelta": 0.1,
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Rotations"
     }
   },
   "webClient": {
@@ -160,13 +178,23 @@
     },
     "serviceName": {
       "HumiditySensor": {
-        "reportHumidity": {
+        "Percent RH": {
           "servicePath": "humidityLevel"
         }
       },
       "TemperatureSensor": {
-        "reportTemperature": {
+        "Degrees C": {
           "servicePath": "temperatureGR"
+        }
+      },
+      "ArmExtenderWiper": {
+        "Volts": {
+          "servicePath": "extenderPosition"
+        }
+      },
+      "GrabberWiper": {
+        "Volts": {
+          "servicePath": "grabberPosition"
         }
       }
     }
