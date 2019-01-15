@@ -85,8 +85,8 @@ class VoltageInputSensorHandler(ConnectServer):
         log.debug("[VoltageInput Event] -> VoltageInput: " + str(voltage))
         device_name = ph.__dict__["deviceName"]
         payload = '{"voltage": "{{voltage}}", "timestamp": "{{dateTime}}", "device": "{{device}}"}'
-        dateTime = datetime.datetime.now().isoformat()
-        j_str = pystache.render(payload, {'voltage': voltage, 'dateTime': dateTime, 'device': device_name})
+        date_time = datetime.datetime.now().isoformat()
+        j_str = pystache.render(payload, {'voltage': voltage, 'dateTime': date_time, 'device': device_name})
         units = ConnectServer.get_config(None).get_device_config(device_name, "units")
         log.debug("[VoltageInput Event] -> message sent: " + j_str)
         WebSender(device_name, units, j_str)

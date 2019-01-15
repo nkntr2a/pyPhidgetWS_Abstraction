@@ -51,7 +51,11 @@
       "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default",
-      "units": "Degrees"
+      "units": "Degrees",
+      "VelocityLimit": 10000,
+      "Acceleration": 10000,
+      "CurrentLimit": 5,
+      "RescaleFactor": 0.1
     },
     "HumiditySensor": {
       "SerialNumber": 512594,
@@ -152,7 +156,11 @@
       "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default",
-      "units": "Degrees"
+      "units": "Degrees",
+      "VelocityLimit": 10000,
+      "Acceleration": 10000,
+      "CurrentLimit": 3,
+      "RescaleFactor": 0.1
     },
     "Locomotion": {
       "SerialNumber": 530286,
@@ -167,7 +175,11 @@
       "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default",
-      "units": "Rotations"
+      "units": "Rotations",
+      "VelocityLimit": 10000,
+      "Acceleration": 10000,
+      "CurrentLimit": 3,
+      "RescaleFactor": 0.1
     }
   },
   "webClient": {
@@ -195,6 +207,11 @@
       "GrabberWiper": {
         "Volts": {
           "servicePath": "grabberPosition"
+        }
+      },
+      "ArmUpDownStepper": {
+        "Degrees": {
+          "servicePath": "armUpDownDeg"
         }
       }
     }

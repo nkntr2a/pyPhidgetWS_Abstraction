@@ -1,11 +1,13 @@
-from flask import Flask, jsonify
-import Buildout_Humidity
+from flask import Flask, json
+import EventDriven_Humidity
 import time
 
 import logging
 
-import Buildout_Temperature
-import Buildout_VoltageInput
+import EventDriven_Stepper
+import EventDriven_Temperature
+import EventDriven_VoltageInput
+import phidgetConfig
 
 logging.basicConfig(format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt = '%m/%d/%Y %I:%M:%S %p',
@@ -29,15 +31,24 @@ def index():
     return "Hello World!"
 
 
+@app.route('/config')
+def w_config():
+    config = phidgetConfig.ConfigTool.get_config_struct(None)
+    j_config = json.dumps(config);
+    return j_config
+
+
 if __name__ == '__main__':
     logging.debug("Application Started")
-    humidityObj = Buildout_Humidity.HumiditySensorHandler("HumiditySensor")
-    time.sleep(10)
-    temperatureObj = Buildout_Temperature.TemperatureSensorHandler("TemperatureSensor")
-    time.sleep(10)
-    extenderObj = Buildout_VoltageInput.VoltageInputSensorHandler("ArmExtenderWiper")
-    time.sleep(10)
-    grabberObj = Buildout_VoltageInput.VoltageInputSensorHandler("GrabberWiper")
-    time.sleep(300)
+    # humidityObj = Buildout_Humidity.StepperControllerHandler("HumiditySensor")
+    # time.sleep(1)
+    # temperatureObj = Buildout_Temperature.TemperatureSensorHandler("TemperatureSensor")
+    # time.sleep(1)
+    # extenderObj = Buildout_VoltageInput.VoltageInputSensorHandler("ArmExtenderWiper")
+    # time.sleep(1)
+    grabberObj = EventDriven_VoltageInput.VoltageInputSensorHandler("GrabberWiper")
+    # time.sleep(1)
+    # armUpDownObj = EventDriven_Stepper.StepperControllerHandler("ArmUpDownStepper")
 
-    #app.run(debug=True)
+
+    app.run(debug=True)
