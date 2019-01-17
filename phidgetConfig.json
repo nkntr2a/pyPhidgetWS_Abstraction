@@ -9,9 +9,9 @@
   "timeoutWaitingForAttach": 35000,
   "deviceList": {
     "ArmExtenderWiper": {
-      "SerialNumber": 512594,
+      "SerialNumber": 530286,
       "Channel": 0,
-      "VINTPort": 0,
+      "VINTPort": 2,
       "ipAddress": "192.168.1.211",
       "port": 5661,
       "serverName": "PhidgetSBC",
@@ -24,8 +24,8 @@
       "units": "Volts"
     },
     "GrabberWiper": {
-      "SerialNumber": 512594,
-      "VINTPort": 0,
+      "SerialNumber": 530286,
+      "VINTPort": 2,
       "Channel": 1,
       "ipAddress": "192.168.1.211",
       "port": 5661,
@@ -53,9 +53,9 @@
       "webClientTemplate": "default",
       "units": "Degrees",
       "VelocityLimit": 10000,
-      "Acceleration": 10000,
+      "Acceleration": 2500,
       "CurrentLimit": 5,
-      "RescaleFactor": 0.1
+      "RescaleFactor": 0.00375
     },
     "HumiditySensor": {
       "SerialNumber": 512594,
@@ -158,9 +158,9 @@
       "webClientTemplate": "default",
       "units": "Degrees",
       "VelocityLimit": 10000,
-      "Acceleration": 10000,
+      "Acceleration": 2500,
       "CurrentLimit": 3,
-      "RescaleFactor": 0.1
+      "RescaleFactor": 0.0075
     },
     "Locomotion": {
       "SerialNumber": 530286,
@@ -176,10 +176,10 @@
       "isRemote": 1,
       "webClientTemplate": "default",
       "units": "Rotations",
-      "VelocityLimit": 10000,
-      "Acceleration": 10000,
+      "VelocityLimit": 5000,
+      "Acceleration": 1500,
       "CurrentLimit": 3,
-      "RescaleFactor": 0.1
+      "RescaleFactor": 0.000073529
     }
   },
   "webClient": {
@@ -212,6 +212,16 @@
       "ArmUpDownStepper": {
         "Degrees": {
           "servicePath": "armUpDownDeg"
+        }
+      },
+      "SpinArm": {
+        "Degrees": {
+          "servicePath": "spinArmDeg"
+        }
+      },
+      "Locomotion": {
+        "Rotations": {
+          "servicePath": "driveWheelRotations"
         }
       }
     }

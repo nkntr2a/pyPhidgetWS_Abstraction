@@ -45,6 +45,8 @@ class StepperControllerHandler(ConnectServer):
         device_name = ph.__dict__["deviceName"]
 
         try:
+            ConnectServer.on_attach_handler(self)
+            log.debug("Setting up stepper attach parameters")
             v_limit = phidgetConfig.ConfigTool.__config__.get_device_config(device_name, "VelocityLimit")
             ph.setVelocityLimit(v_limit)
             accel = phidgetConfig.ConfigTool.__config__.get_device_config(device_name, "Acceleration")
@@ -53,7 +55,8 @@ class StepperControllerHandler(ConnectServer):
             ph.setCurrentLimit(current_limit)
             rescale_factor = phidgetConfig.ConfigTool.__config__.get_device_config(device_name, "RescaleFactor")
             ph.setRescaleFactor(rescale_factor)
-            ConnectServer.on_attach_handler(self)
+
+
 
         except PhidgetException as e:
             print("\nError in Attach Event:")
@@ -85,9 +88,9 @@ class StepperControllerHandler(ConnectServer):
         print("[Position Change Event] -> Position (Degrees/Rotations): " + str(position_deg))
         log.debug("[Position Change Event] -> Position (Degrees/Rotations): " + str(position_deg))
         units = ConnectServer.get_config(None).get_device_config(device_name, "units")
-        payload = '{"position": "{{position_deg}}", "timestamp": "{{dateTime}}", "device": "{{device}}"}'
+        payload = '{"position": "{{position}}", "timestamp": "{{dateTime}}", "device": "{{device}}"}'
         date_time = datetime.datetime.now().isoformat()
-        j_str = pystache.render(payload, {'position': position_deg, 'dateTime': date_time, 'device': device_name})
+        j_str = pystache.render(payload, {'position': str(position_deg), 'dateTime': date_time, 'device': device_name})
 
         WebSender(device_name, units, j_str)
 

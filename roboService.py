@@ -1,7 +1,7 @@
 from flask import Flask, json
 import EventDriven_Humidity
 import time
-
+import ObjectHotel
 import logging
 
 import EventDriven_Stepper
@@ -34,21 +34,46 @@ def index():
 @app.route('/config')
 def w_config():
     config = phidgetConfig.ConfigTool.get_config_struct(None)
-    j_config = json.dumps(config);
+    j_config = json.dumps(config)
     return j_config
 
 
-if __name__ == '__main__':
+@app.before_first_request
+def do_something_only_once():
+    print("Doing The Thing")
     logging.debug("Application Started")
-    # humidityObj = Buildout_Humidity.StepperControllerHandler("HumiditySensor")
-    # time.sleep(1)
-    # temperatureObj = Buildout_Temperature.TemperatureSensorHandler("TemperatureSensor")
-    # time.sleep(1)
-    # extenderObj = Buildout_VoltageInput.VoltageInputSensorHandler("ArmExtenderWiper")
-    # time.sleep(1)
-    grabberObj = EventDriven_VoltageInput.VoltageInputSensorHandler("GrabberWiper")
-    # time.sleep(1)
-    # armUpDownObj = EventDriven_Stepper.StepperControllerHandler("ArmUpDownStepper")
+    o_h = ObjectHotel.ObjectHotel()
+    humidity_obj = EventDriven_Humidity.HumiditySensorHandler("HumiditySensor")
+    o_h.checkIn("HumiditySensorObj", humidity_obj)
+    temperature_obj = EventDriven_Temperature.TemperatureSensorHandler("TemperatureSensor")
+    o_h.checkIn("TemperatureSensorObj", temperature_obj)
+    extender_obj = EventDriven_VoltageInput.VoltageInputSensorHandler("ArmExtenderWiper")
+    o_h.checkIn("ArmExtenderWiperObj", extender_obj)
+    grabber_obj = EventDriven_VoltageInput.VoltageInputSensorHandler("GrabberWiper")
+    o_h.checkIn("GrabberWiperObj", grabber_obj)
+    arm_up_down_obj = EventDriven_Stepper.StepperControllerHandler("ArmUpDownStepper")
+    o_h.checkIn("ArmUpDownStepperObj", arm_up_down_obj)
+    spin_arm_obj = EventDriven_Stepper.StepperControllerHandler("SpinArm")
+    o_h.checkIn("SpinArmObj", spin_arm_obj)
+    locomotion_obj = EventDriven_Stepper.StepperControllerHandler("Locomotion")
+    o_h.checkIn("LocomotionObj", locomotion_obj)
+    ud_stepper = o_h.visit("Locomotion")
+    pos = ud_stepper.getPosition()
+    time.sleep(5)
+    ud_stepper.setEngaged(True)
+    ud_stepper.setTargetPosition(-2)
+    time.sleep(12)
+    ud_stepper.setTargetPosition(2)
+    time.sleep(20)
+    ud_stepper.setTargetPosition(0)
+
+    print(pos)
+    print("First Position")
+    time.sleep(10)
+    pos = ud_stepper.getPosition()
+    print("Second Position: " + str(pos))
+    ud_stepper.setEngaged(False)
 
 
+if __name__ == '__main__':
     app.run(debug=True)
