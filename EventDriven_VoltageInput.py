@@ -6,6 +6,7 @@ import traceback
 import logging
 
 import phidgetConfig
+from ObjectHotel import ObjectHotel
 
 log = logging.getLogger(__name__)
 
@@ -38,12 +39,9 @@ class VoltageInputSensorHandler(ConnectServer):
             log.error("Runtime Error -> Creating VoltageInputSensor: " + e.details)
             raise e
 
-
-
     def onAttachHandler(self):
 
         ph = self
-
         try:
             ConnectServer.on_attach_handler(self)
 
@@ -57,16 +55,18 @@ class VoltageInputSensorHandler(ConnectServer):
             ph.setVoltageChangeTrigger(min_delta)
 
         except PhidgetException as e:
-            print("\nError in Detach Event:")
+            print("\nError in Attach Event:")
             tb = traceback.format_exc()
-            log.error("There was an error in a Detach Event: " + tb)
+            log.error("There was an error in a Attach Event: " + tb)
             ConnectServer.DisplayError(e)
             traceback.print_exc
         except RuntimeError as e:
-            print("\nError in Detach Event:")
+            print("\nError in Attach Event:")
             tb = traceback.format_exc()
-            log.error("There was an error in a Detach Event: " + tb)
+            log.error("There was an error in a Attach Event: " + tb)
             traceback.print_exc
+        o_h = ObjectHotel()
+        o_h.checkIn(ph.__dict__["deviceName"], ph)
         return
 
     def onDetachHandler(self):

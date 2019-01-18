@@ -89,6 +89,9 @@ class ConfigTool:
     def get_web_client_template(self, device):
         return self.__configDict['webClient'][self.__configDict["deviceList"][device]["webClientTemplate"]]
 
+    def get_opposite_linear_motor_relay(self, device):
+        return self.__configDict["deviceList"][device]["oppositeHandler"]
+
 def main():
     cfg = ConfigTool('./phidgetConfig.json')
     print("Config is: ", cfg.get_config_tool())

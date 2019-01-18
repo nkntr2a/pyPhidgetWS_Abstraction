@@ -154,10 +154,11 @@ class ConnectServer:
                 * DataInterval defines the minimum time between DeviceChange events.
                 * DataInterval can be set to any value from MinDataInterval to MaxDataInterval.
                 """
-            pollInterval = phidgetConfig.ConfigTool.__config__.get_device_config(ph.deviceName, "PollInterval")
-            ph.setDataInterval(pollInterval)
-            print("\n\tSetting DataInterval to " + str(pollInterval) + "ms")
-            log.debug("Setting DataInterval to " + str(pollInterval) + "ms")
+            if phidgetConfig.ConfigTool.__config__.get_device_config(ph.deviceName, "Type") != "PowerRelay":
+                pollInterval = phidgetConfig.ConfigTool.__config__.get_device_config(ph.deviceName, "PollInterval")
+                ph.setDataInterval(pollInterval)
+                print("\n\tSetting DataInterval to " + str(pollInterval) + "ms")
+                log.debug("Setting DataInterval to " + str(pollInterval) + "ms")
 
         except PhidgetException as e:
             print("\nError in Attach Event:")

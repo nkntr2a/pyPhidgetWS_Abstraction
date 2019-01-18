@@ -1,6 +1,8 @@
+import time
+
 from flask import Flask, json
 import EventDriven_Humidity
-import time
+from Phidget22 import PhidgetException
 import ObjectHotel
 import logging
 
@@ -8,6 +10,8 @@ import EventDriven_Stepper
 import EventDriven_Temperature
 import EventDriven_VoltageInput
 import phidgetConfig
+import EventDriven_DigitalOutput
+import LinearMotorRelayController
 
 logging.basicConfig(format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt = '%m/%d/%Y %I:%M:%S %p',
@@ -57,23 +61,48 @@ def do_something_only_once():
     o_h.checkIn("SpinArmObj", spin_arm_obj)
     locomotion_obj = EventDriven_Stepper.StepperControllerHandler("Locomotion")
     o_h.checkIn("LocomotionObj", locomotion_obj)
-    ud_stepper = o_h.visit("Locomotion")
-    pos = ud_stepper.getPosition()
-    time.sleep(5)
-    ud_stepper.setEngaged(True)
-    ud_stepper.setTargetPosition(-2)
-    time.sleep(12)
-    ud_stepper.setTargetPosition(2)
-    time.sleep(20)
-    ud_stepper.setTargetPosition(0)
-
-    print(pos)
-    print("First Position")
-    time.sleep(10)
-    pos = ud_stepper.getPosition()
-    print("Second Position: " + str(pos))
-    ud_stepper.setEngaged(False)
+    arm_in_obj = EventDriven_DigitalOutput.DigitalOutputHandler("ArmIn")
+    o_h.checkIn("ArmInObj", arm_in_obj)
+    arm_out_obj = EventDriven_DigitalOutput.DigitalOutputHandler("ArmOut")
+    o_h.checkIn("ArmOutObj", arm_out_obj)
+    gripper_close_obj = EventDriven_DigitalOutput.DigitalOutputHandler("CloseGripper")
+    o_h.checkIn("CloseGripperObj", gripper_close_obj)
+    gripper_open_obj = EventDriven_DigitalOutput.DigitalOutputHandler("OpenGripper")
+    o_h.checkIn("OpenGripperObj", gripper_open_obj)
+    time.sleep(15)
+    lmrc = LinearMotorRelayController.LinearMotorActuator("CloseGripper")
+    lmrc.setVoltageChangeTrigger(0.01)
+    lmrc.actuate_lm(True)
+    time.sleep(3)
+    print(lmrc.get_state())
+    lmrc.actuate_lm(False)
+    print(lmrc.get_state())
+    lmrc.setVoltageChangeTrigger(0.1)
+    time.sleep(1)
+    lmrc = LinearMotorRelayController.LinearMotorActuator("OpenGripper")
+    lmrc.setVoltageChangeTrigger(0.01)
+    lmrc.actuate_lm(True)
+    time.sleep(3)
+    print(lmrc.get_state())
+    lmrc.actuate_lm(False)
+    print(lmrc.get_state())
+    lmrc.setVoltageChangeTrigger(0.1)
 
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+def move_stepper(device_name, position):
+    logging.debug("About to move the stepper for " + device_name)
+    try:
+        o_h = ObjectHotel.ObjectHotel()
+        device_handle = o_h.visit(device_name)
+        pos = device_handle.getPosition()
+        logging.debug(device_name + " started out at position " + pos + ", moving to " + position)
+        device_handle.setTargetPosition(position)
+    except PhidgetException as e:
+        logging.error("Unable to move the stepper motor for " + device_name, exc_info=True)
+    except Exception as e:
+        logging.error("Unable to move the stepper motor for " + device_name + "for an unknown reason", exc_info=True)
+    return
