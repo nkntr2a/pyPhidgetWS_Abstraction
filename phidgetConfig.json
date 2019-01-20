@@ -7,6 +7,7 @@
   "isRemoteHost": true,
   "port": 5661,
   "timeoutWaitingForAttach": 35000,
+  "baseRescaleFactor": 1,
   "deviceList": {
     "ArmExtenderWiper": {
       "SerialNumber": 530286,
@@ -18,7 +19,7 @@
       "password": null,
       "Type": "VoltageInput",
       "PollInterval": 250,
-      "minimumDelta": 0.01,
+      "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default",
       "units": "Volts"
@@ -33,7 +34,7 @@
       "password": null,
       "Type": "VoltageInput",
       "PollInterval": 250,
-      "minimumDelta": 0.01,
+      "minimumDelta": 0.1,
       "isRemote": 1,
       "webClientTemplate": "default",
       "units": "Volts"
@@ -101,7 +102,8 @@
       "isRemote": 1,
       "webClientTemplate": "default",
       "oppositeHandler": "ArmOut",
-      "positionHandler": "ArmExtenderWiper"
+      "positionHandler": "ArmExtenderWiper",
+      "voltsDirection": "fall"
     },
     "ArmOut": {
       "SerialNumber": 530286,
@@ -117,7 +119,8 @@
       "isRemote": 1,
       "webClientTemplate": "default",
       "oppositeHandler": "ArmIn",
-      "positionHandler": "ArmExtenderWiper"
+      "positionHandler": "ArmExtenderWiper",
+      "voltsDirection": "rise"
     },
     "CloseGripper": {
       "SerialNumber": 530286,
@@ -133,7 +136,10 @@
       "isRemote": 1,
       "webClientTemplate": "default",
       "oppositeHandler": "OpenGripper",
-      "positionHandler": "GrabberWiper"
+      "positionHandler": "GrabberWiper",
+      "voltsDirection": "fall",
+      "GripperHoldCycleTime": 0.2,
+      "GripperReleaseCycleTime": 0.1
     },
     "OpenGripper": {
       "SerialNumber": 530286,
@@ -149,7 +155,10 @@
       "isRemote": 1,
       "webClientTemplate": "default",
       "oppositeHandler": "CloseGripper",
-      "positionHandler": "GrabberWiper"
+      "positionHandler": "GrabberWiper",
+      "voltsDirection": "rise",
+      "GripperHoldCycleTime": 0.2,
+      "GripperReleaseCycleTime": 0.1
     },
     "LocomotionStopSensor": {
       "SerialNumber": 512594,
@@ -266,6 +275,51 @@
       "Locomotion": {
         "Rotations": {
           "servicePath": "driveWheelRotations"
+        }
+      }
+    }
+  },
+  "StepperProfiles": {
+    "Device": {
+      "ArmUpDownStepper": {
+        "default": {
+          "VelocityLimit": 10000,
+          "Acceleration": 2500,
+          "CurrentLimit": 5
+        },
+        "POST": {
+          "VelocityLimit": 3000,
+          "Acceleration": 1000,
+          "CurrentLimit": 1
+        },
+        "SlowAscend": {
+          "VelocityLimit": 3000,
+          "Acceleration": 1000,
+          "CurrentLimit": 5
+        }
+      },
+      "SpinArm": {
+        "default": {
+          "VelocityLimit": 10000,
+          "Acceleration": 2500,
+          "CurrentLimit": 3
+        },
+        "POST": {
+          "VelocityLimit": 3000,
+          "Acceleration": 1000,
+          "CurrentLimit": 1
+        }
+      },
+      "Locomotion": {
+        "default": {
+          "VelocityLimit": 5000,
+          "Acceleration": 1500,
+          "CurrentLimit": 3
+        },
+        "POST": {
+          "VelocityLimit": 1500,
+          "Acceleration": 500,
+          "CurrentLimit": 1
         }
       }
     }

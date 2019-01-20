@@ -80,11 +80,17 @@ class ConfigTool:
     def get_timeout_wait_attach(self):
         return self.__configDict["timeoutWaitingForAttach"]
 
+    def get_base_rescale_factor(self):
+        return self.__configDict["baseRescaleFactor"]
+
     def get_device_config(self, device, key):
         returnable = self.__configDict["deviceList"][device][key]
         if key == 'password' and self.__configDict["deviceList"][device][key] is None:
             returnable = ""
         return returnable
+
+    def get_stepper_profile(self, device, profile):
+        return self.__configDict["StepperProfiles"]["Device"][device][profile]
 
     def get_web_client_template(self, device):
         return self.__configDict['webClient'][self.__configDict["deviceList"][device]["webClientTemplate"]]

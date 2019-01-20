@@ -1,6 +1,6 @@
 import time
 
-from flask import Flask, json
+from flask import Flask, request, json, jsonify
 import EventDriven_Humidity
 from Phidget22 import PhidgetException
 import ObjectHotel
@@ -9,9 +9,11 @@ import logging
 import EventDriven_Stepper
 import EventDriven_Temperature
 import EventDriven_VoltageInput
+import StepperMotorController
 import phidgetConfig
 import EventDriven_DigitalOutput
 import LinearMotorRelayController
+from HoldGripper import HoldGripper
 
 logging.basicConfig(format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt = '%m/%d/%Y %I:%M:%S %p',
@@ -42,6 +44,36 @@ def w_config():
     return j_config
 
 
+@app.route('/moveStepper', methods=['POST'])
+def stepper_move():
+    content = request.json
+    stepper_motor_controller = StepperMotorController.StepperController(content["device"])
+    pos = stepper_motor_controller.get_position()
+    stepper_motor_controller.set_stepper_profile(content["profile"])
+    stepper_motor_controller.reposition_stepper(content["position"], content["waitForMove"])
+    print(str(content))
+    print("The profile specified is " + content["profile"])
+    return jsonify({"commandSent": True})
+
+
+@app.route('/moveLinearMotor', methods=['POST'])
+def lm_move():
+    content = request.json
+    print(str(content))
+    linear_motor_controller = LinearMotorRelayController.LinearMotorActuator(content["device"])
+    volts = linear_motor_controller.move_to_position(content["position"])
+    return jsonify({"endingVolts": volts, "commandSent": True})
+
+
+@app.route('/holdGripper', methods=['POST'])
+def hold_gripper():
+    content=request.json
+    o_h = ObjectHotel.ObjectHotel()
+    gripper_hold_obj = o_h.visit("HoldGripper")
+    gripper_hold_obj.set_hold_state(content["holdGripper"])
+    return jsonify({"holdState": gripper_hold_obj.get_hold_state()})
+
+
 @app.before_first_request
 def do_something_only_once():
     print("Doing The Thing")
@@ -69,24 +101,8 @@ def do_something_only_once():
     o_h.checkIn("CloseGripperObj", gripper_close_obj)
     gripper_open_obj = EventDriven_DigitalOutput.DigitalOutputHandler("OpenGripper")
     o_h.checkIn("OpenGripperObj", gripper_open_obj)
-    time.sleep(15)
-    lmrc = LinearMotorRelayController.LinearMotorActuator("CloseGripper")
-    lmrc.setVoltageChangeTrigger(0.01)
-    lmrc.actuate_lm(True)
-    time.sleep(3)
-    print(lmrc.get_state())
-    lmrc.actuate_lm(False)
-    print(lmrc.get_state())
-    lmrc.setVoltageChangeTrigger(0.1)
-    time.sleep(1)
-    lmrc = LinearMotorRelayController.LinearMotorActuator("OpenGripper")
-    lmrc.setVoltageChangeTrigger(0.01)
-    lmrc.actuate_lm(True)
-    time.sleep(3)
-    print(lmrc.get_state())
-    lmrc.actuate_lm(False)
-    print(lmrc.get_state())
-    lmrc.setVoltageChangeTrigger(0.1)
+    hg = HoldGripper()
+    o_h.checkIn("HoldGripper", hg)
 
 
 if __name__ == '__main__':
@@ -106,3 +122,23 @@ def move_stepper(device_name, position):
     except Exception as e:
         logging.error("Unable to move the stepper motor for " + device_name + "for an unknown reason", exc_info=True)
     return
+
+
+'''time.sleep(15)
+    lmrc = LinearMotorRelayController.LinearMotorActuator("CloseGripper")
+    lmrc.setVoltageChangeTrigger(0.01)
+    lmrc.actuate_lm(True)
+    time.sleep(3)
+    print(lmrc.get_state())
+    lmrc.actuate_lm(False)
+    print(lmrc.get_state())
+    lmrc.setVoltageChangeTrigger(0.1)
+    time.sleep(1)
+    lmrc = LinearMotorRelayController.LinearMotorActuator("OpenGripper")
+    lmrc.setVoltageChangeTrigger(0.01)
+    lmrc.actuate_lm(True)
+    time.sleep(3)
+    print(lmrc.get_state())
+    lmrc.actuate_lm(False)
+    print(lmrc.get_state())
+    lmrc.setVoltageChangeTrigger(0.1)'''
