@@ -9,7 +9,7 @@ from ObjectHotel import ObjectHotel
 log = logging.getLogger(__name__)
 
 
-class LinearMotorActuator():
+class LinearMotorActuator:
 
     def __init__(self, device_name, config=None):
         log.info("Initializing Linear Motor for " + device_name)

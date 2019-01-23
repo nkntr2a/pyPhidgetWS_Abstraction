@@ -141,12 +141,12 @@ class ConnectServer:
                 hubPort = ph.getHubPort()
                 print("\n\t-> Channel Class: " + channelClassName + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Hub Port: " + str(hubPort) + "\n\t-> Channel:  " + str(channel) + "\n")
-                log.debug("Device Attached!\n\t-> Channel Class: " + channelClassName + "\n\t-> Serial Number: " + str(serialNumber) +
+                log.info("Device Attached!\n\t-> Channel Class: " + channelClassName + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Hub Port: " + str(hubPort) + "\n\t-> Channel:  " + str(channel) + "\n")
             else:
                 print("\n\t-> Channel Class: " + channelClassName + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Channel:  " + str(channel) + "\n")
-                log.debug("Device Attached!\n\t-> Channel Class: " + channelClassName + "\n\t-> Serial Number: " + str(serialNumber) +
+                log.info("Device Attached!\n\t-> Channel Class: " + channelClassName + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Channel:  " + str(channel) + "\n")
 
             """
@@ -154,7 +154,8 @@ class ConnectServer:
                 * DataInterval defines the minimum time between DeviceChange events.
                 * DataInterval can be set to any value from MinDataInterval to MaxDataInterval.
                 """
-            if phidgetConfig.ConfigTool.__config__.get_device_config(ph.deviceName, "Type") != "PowerRelay":
+            cfg = phidgetConfig.ConfigTool()
+            if cfg.get_device_config(ph.deviceName, "Type") != "PowerRelay" and cfg.get_device_config(ph.deviceName, "Type") != "DigitalInput":
                 pollInterval = phidgetConfig.ConfigTool.__config__.get_device_config(ph.deviceName, "PollInterval")
                 ph.setDataInterval(pollInterval)
                 print("\n\tSetting DataInterval to " + str(pollInterval) + "ms")
@@ -186,13 +187,13 @@ class ConnectServer:
             if (deviceClass != DeviceClass.PHIDCLASS_VINT):
                 print("\n\t-> Channel Class: " + channelClass + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Channel:  " + str(channel) + "\n")
-                log.debug("Device Detached!\n\t-> Channel Class: " + channelClass + "\n\t-> Serial Number: " + str(serialNumber) +
+                log.info("Device Detached!\n\t-> Channel Class: " + channelClass + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Channel:  " + str(channel) + "\n")
             else:
                 hubPort = ph.getHubPort()
                 print("\n\t-> Channel Class: " + channelClass + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Hub Port: " + str(hubPort) + "\n\t-> Channel:  " + str(channel) + "\n")
-                log.debug("Device Detached!\n\t-> Channel Class: " + channelClass + "\n\t-> Serial Number: " + str(serialNumber) +
+                log.info("Device Detached!\n\t-> Channel Class: " + channelClass + "\n\t-> Serial Number: " + str(serialNumber) +
                       "\n\t-> Hub Port: " + str(hubPort) + "\n\t-> Channel:  " + str(channel) + "\n")
 
         except PhidgetException as e:

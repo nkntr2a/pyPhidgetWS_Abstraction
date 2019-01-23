@@ -48,15 +48,15 @@ class DigitalInputHandler(ConnectServer):
             ConnectServer.on_attach_handler(self)
 
         except PhidgetException as e:
-            print("\nError in Detach Event:")
+            print("\nError in Attach Event:")
             tb = traceback.format_exc()
-            log.error("There was an error in a Detach Event: " + tb)
+            log.error("There was an error in a Attach Event: " + tb)
             ConnectServer.DisplayError(e)
             traceback.print_exc
         except RuntimeError as e:
-            print("\nError in Detach Event:")
+            print("\nError in Attach Event:")
             tb = traceback.format_exc()
-            log.error("There was an error in a Detach Event: " + tb)
+            log.error("There was an error in a Attach Event: " + tb)
             traceback.print_exc
         oh = ObjectHotel()
         oh.checkIn(ph.__dict__["deviceName"], ph)
@@ -77,6 +77,11 @@ class DigitalInputHandler(ConnectServer):
         dateTime = datetime.datetime.now().isoformat()
         jStr = pystache.render(payload, {'state': current_state, 'dateTime': dateTime, 'device': device_name})
         log.debug("[State Change Event] -> message sent: " + jStr)
+        o_h = ObjectHotel()
+        cfg = phidgetConfig.ConfigTool()
+        event_tracker_name = cfg.get_device_config(device_name, "ProximityEventTracker")
+        event_tracker = o_h.visit(event_tracker_name)
+        event_tracker.add_event(current_state)
         WebSender(device_name, units, jStr)
 
     def onErrorHandler(self, errorCode, errorString):

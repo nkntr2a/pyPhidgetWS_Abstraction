@@ -1,8 +1,12 @@
 import time
 
 from flask import Flask, request, json, jsonify
+
+import EventDriven_DigitalInput
 import EventDriven_Humidity
 from Phidget22 import PhidgetException
+
+import LastFiveTriggers
 import ObjectHotel
 import logging
 
@@ -47,13 +51,29 @@ def w_config():
 @app.route('/moveStepper', methods=['POST'])
 def stepper_move():
     content = request.json
+    print(str(content))
     stepper_motor_controller = StepperMotorController.StepperController(content["device"])
-    pos = stepper_motor_controller.get_position()
     stepper_motor_controller.set_stepper_profile(content["profile"])
     stepper_motor_controller.reposition_stepper(content["position"], content["waitForMove"])
-    print(str(content))
-    print("The profile specified is " + content["profile"])
     return jsonify({"commandSent": True})
+
+
+@app.route('/getStepperPosition', methods=['POST'])
+def get_stepper_position():
+    content = request.json
+    stepper_motor_controller = StepperMotorController.StepperController(content["device"])
+    pos = stepper_motor_controller.get_position()
+    return jsonify({"commandSent": True, "device_name": content["device"], "position": pos})
+
+
+@app.route('/updateStepperPosition', methods=['POST'])
+def update_stepper_position():
+    content = request.json
+    stepper_motor_controller = StepperMotorController.StepperController(content["device"])
+    position = content["position"]
+    stepper_motor_controller.addPositionOffset(position)
+    pos = stepper_motor_controller.get_position()
+    return jsonify({"commandSent": True, "device_name": content["device"], "position": pos})
 
 
 @app.route('/moveLinearMotor', methods=['POST'])
@@ -76,7 +96,6 @@ def hold_gripper():
 
 @app.before_first_request
 def do_something_only_once():
-    print("Doing The Thing")
     logging.debug("Application Started")
     o_h = ObjectHotel.ObjectHotel()
     humidity_obj = EventDriven_Humidity.HumiditySensorHandler("HumiditySensor")
@@ -103,6 +122,18 @@ def do_something_only_once():
     o_h.checkIn("OpenGripperObj", gripper_open_obj)
     hg = HoldGripper()
     o_h.checkIn("HoldGripper", hg)
+    are = LastFiveTriggers.LastFiveEvents()
+    o_h.checkIn("ArmRotateLastFiveProximityEvents", are)
+    aude = LastFiveTriggers.LastFiveEvents()
+    o_h.checkIn("ArmUpDownLastFiveProximityEvents", aude)
+    loce = LastFiveTriggers.LastFiveEvents()
+    o_h.checkIn("LocomotionLastFiveProximityEvents", loce)
+    locomotion_proximity_obj = EventDriven_DigitalInput.DigitalInputHandler("LocomotionStopSensor")
+    o_h.checkIn("LocomotionProximitySensorObj", locomotion_proximity_obj)
+    arm_up_down_proximity_sensor_obj = EventDriven_DigitalInput.DigitalInputHandler("ArmUpDownStopSensor")
+    o_h.checkIn("ArmUpDownProximitySensorObj", arm_up_down_proximity_sensor_obj)
+    arm_rotation_proximity_sensor_obj = EventDriven_DigitalInput.DigitalInputHandler("ArmRotationStopSensor")
+    o_h.checkIn("ArmRotationProximitySensorObj", arm_rotation_proximity_sensor_obj)
 
 
 if __name__ == '__main__':

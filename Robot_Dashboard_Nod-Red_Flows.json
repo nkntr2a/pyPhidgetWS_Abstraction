@@ -1,0 +1,373 @@
+[
+    {
+        "id": "b32672dd.eaac9",
+        "type": "tab",
+        "label": "Robot Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "46296a98.6635f4",
+        "type": "ui_chart",
+        "z": "b32672dd.eaac9",
+        "name": "Arm Extension",
+        "group": "43259de8.75a894",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Arm Extension",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "5",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 860,
+        "y": 500,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "dcdc92bc.b1747",
+        "type": "link in",
+        "z": "b32672dd.eaac9",
+        "name": "",
+        "links": [
+            "262693ac.0bc7ac"
+        ],
+        "x": 640,
+        "y": 500,
+        "wires": [
+            [
+                "46296a98.6635f4"
+            ]
+        ]
+    },
+    {
+        "id": "103b61e7.2067be",
+        "type": "ui_chart",
+        "z": "b32672dd.eaac9",
+        "name": "Gripper Position",
+        "group": "43259de8.75a894",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gripper position",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "5",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 860,
+        "y": 540,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "81c5908a.fc293",
+        "type": "link in",
+        "z": "b32672dd.eaac9",
+        "name": "Gripper Position",
+        "links": [
+            "8022cd4d.a0fc6"
+        ],
+        "x": 635,
+        "y": 540,
+        "wires": [
+            [
+                "103b61e7.2067be"
+            ]
+        ]
+    },
+    {
+        "id": "b15a1bd5.323488",
+        "type": "ui_chart",
+        "z": "b32672dd.eaac9",
+        "name": "Arm Vertical Position",
+        "group": "103aa68a.ec1129",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Arm Vertical Position",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-90",
+        "ymax": "80",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 880,
+        "y": 580,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "776bb718.79bd58",
+        "type": "link in",
+        "z": "b32672dd.eaac9",
+        "name": "ArmUpDown",
+        "links": [
+            "1cce82f9.db303d"
+        ],
+        "x": 635,
+        "y": 580,
+        "wires": [
+            [
+                "b15a1bd5.323488"
+            ]
+        ]
+    },
+    {
+        "id": "c2e3d811.01d808",
+        "type": "ui_chart",
+        "z": "b32672dd.eaac9",
+        "name": "Spin Arm Position",
+        "group": "103aa68a.ec1129",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Spin Arm Position",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-180",
+        "ymax": "180",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 870,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "fead2bf0.e013b8",
+        "type": "ui_chart",
+        "z": "b32672dd.eaac9",
+        "name": "Track Location in Rotations",
+        "group": "103aa68a.ec1129",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Track Location in Rotations",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-3",
+        "ymax": "-3",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "x": 900,
+        "y": 660,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "205d87c6.077a88",
+        "type": "link in",
+        "z": "b32672dd.eaac9",
+        "name": "Spin Arm Position",
+        "links": [
+            "7fcb96ac.115238"
+        ],
+        "x": 635,
+        "y": 620,
+        "wires": [
+            [
+                "c2e3d811.01d808"
+            ]
+        ]
+    },
+    {
+        "id": "b7da02fd.5eda7",
+        "type": "link in",
+        "z": "b32672dd.eaac9",
+        "name": "Track Location",
+        "links": [
+            "a63104be.a2c308"
+        ],
+        "x": 635,
+        "y": 660,
+        "wires": [
+            [
+                "fead2bf0.e013b8"
+            ]
+        ]
+    },
+    {
+        "id": "b02433b0.dd598",
+        "type": "ui_gauge",
+        "z": "b32672dd.eaac9",
+        "name": "Up-Down Stepper",
+        "group": "56a83e25.de6d7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Up-Down Stepper",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 870,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "43259de8.75a894",
+        "type": "ui_group",
+        "z": "",
+        "name": "Linear Motors",
+        "tab": "e4c573a6.d3c7",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "103aa68a.ec1129",
+        "type": "ui_group",
+        "z": "",
+        "name": "Track Location in Rotations",
+        "tab": "4c0c9d3.e49c764",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "56a83e25.de6d7",
+        "type": "ui_group",
+        "z": "",
+        "name": "Arm Location",
+        "tab": "4c0c9d3.e49c764",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e4c573a6.d3c7",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Arm Extension Sensor",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4c0c9d3.e49c764",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Stepper Motors",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

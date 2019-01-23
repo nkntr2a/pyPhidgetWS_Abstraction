@@ -1,0 +1,798 @@
+[
+    {
+        "id": "69658317.2e071c",
+        "type": "tab",
+        "label": "Robot Flows",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ffd5db2c.09c3e8",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "StepperLocation",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 1560,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb40ea0.1b52a18",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Get Stepper Position",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/getStepperPosition",
+        "tls": "",
+        "x": 900,
+        "y": 600,
+        "wires": [
+            [
+                "dcaade81.8175d"
+            ]
+        ]
+    },
+    {
+        "id": "61ed4434.b1b1bc",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "StepperLocation.ArmUpDown",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "60b28216.a438bc"
+            ]
+        ]
+    },
+    {
+        "id": "60b28216.a438bc",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "ArmUpDownStepper",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ArmUpDownStepper",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 560,
+        "wires": [
+            [
+                "81813454.942a58"
+            ]
+        ]
+    },
+    {
+        "id": "81813454.942a58",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"{{payload}}\"\n}\n",
+        "output": "json",
+        "x": 650,
+        "y": 560,
+        "wires": [
+            [
+                "eb40ea0.1b52a18"
+            ]
+        ]
+    },
+    {
+        "id": "9fd07713.2a3718",
+        "type": "actionflows_out",
+        "z": "69658317.2e071c",
+        "name": "action out",
+        "links": [],
+        "x": 1460,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "dcaade81.8175d",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "Update Global Stepper Location Variable",
+        "func": "var dict = global.get(\"stepperLocation\");\ndict[msg.payload.device_name] = msg.payload.position;\nglobal.set(\"stepperLocation\", dict);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1200,
+        "y": 600,
+        "wires": [
+            [
+                "9fd07713.2a3718"
+            ]
+        ]
+    },
+    {
+        "id": "67a1c0d5.3479b",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "StepperLocation.SpinArm",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 230,
+        "y": 600,
+        "wires": [
+            [
+                "bb15ddcb.19b65"
+            ]
+        ]
+    },
+    {
+        "id": "bb15ddcb.19b65",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "SpinArm",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "SpinArm",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 600,
+        "wires": [
+            [
+                "d34e02e.d9128"
+            ]
+        ]
+    },
+    {
+        "id": "d34e02e.d9128",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"{{payload}}\"\n}\n",
+        "output": "json",
+        "x": 650,
+        "y": 600,
+        "wires": [
+            [
+                "eb40ea0.1b52a18"
+            ]
+        ]
+    },
+    {
+        "id": "74089c56.334834",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "StepperLocation.Locomotion",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "16e5c062.ee83a"
+            ]
+        ]
+    },
+    {
+        "id": "16e5c062.ee83a",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "Locomotion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Locomotion",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 640,
+        "wires": [
+            [
+                "3f3bd8bc.6e3018"
+            ]
+        ]
+    },
+    {
+        "id": "3f3bd8bc.6e3018",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"{{payload}}\"\n}\n",
+        "output": "json",
+        "x": 650,
+        "y": 640,
+        "wires": [
+            [
+                "eb40ea0.1b52a18"
+            ]
+        ]
+    },
+    {
+        "id": "e25190f3.c4395",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "StepperLocationInitialized",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 910,
+        "y": 640,
+        "wires": [
+            [
+                "83618c9a.305ad"
+            ]
+        ]
+    },
+    {
+        "id": "83618c9a.305ad",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "Location Been Set?",
+        "property": "locationSetFlag",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            [
+                "9fd07713.2a3718"
+            ],
+            [
+                "9fd07713.2a3718",
+                "156f4441.ac296c"
+            ]
+        ]
+    },
+    {
+        "id": "156f4441.ac296c",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "Initialize Stepper Location Global Variable",
+        "func": "global.set(\"stepperLocation\", {});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1440,
+        "y": 660,
+        "wires": [
+            [
+                "f6816573.7825a8"
+            ]
+        ]
+    },
+    {
+        "id": "bc35678c.93caa8",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "global",
+        "name": "FindLocationStop",
+        "prop": "locationStopSensor",
+        "untilprop": "2",
+        "until": "gte",
+        "loop": "watch",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 1170,
+        "y": 140,
+        "wires": [
+            [
+                "1995720a.da08fe"
+            ]
+        ]
+    },
+    {
+        "id": "d81ff8c4.375b18",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "FindLocationStop",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "c38d4b09.4bb438"
+            ]
+        ]
+    },
+    {
+        "id": "3630a872.3dce28",
+        "type": "actionflows_out",
+        "z": "69658317.2e071c",
+        "name": "action out",
+        "links": [],
+        "x": 1700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5ada9b28.563b24",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": true\n}\n    ",
+        "output": "json",
+        "x": 1330,
+        "y": 320,
+        "wires": [
+            [
+                "da31e577.32b9c8"
+            ]
+        ]
+    },
+    {
+        "id": "ff407dc6.abdbf",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "StepperLocation.Locomotion",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "f377eea9.905f2"
+            ]
+        ]
+    },
+    {
+        "id": "f377eea9.905f2",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "locationCounter",
+                "pt": "msg",
+                "to": "stepperLocation.Locomotion",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "timesLooped",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "smallSteps",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 140,
+        "wires": [
+            [
+                "bc35678c.93caa8"
+            ]
+        ]
+    },
+    {
+        "id": "da31e577.32b9c8",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Move Drive Wheel",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1510,
+        "y": 320,
+        "wires": [
+            [
+                "3630a872.3dce28"
+            ]
+        ]
+    },
+    {
+        "id": "1ae8ac4e.1446e4",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "if (msg.smallSteps === 0) {\n    var curLoc = global.get(\"driveLocation\");\n    msg.locationCounter = curLoc - 0.2;\n    msg.smallSteps++;\n}\nmsg.locationCounter -= 0.07;\nmsg.payload = {};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1150,
+        "y": 320,
+        "wires": [
+            [
+                "5ada9b28.563b24"
+            ]
+        ]
+    },
+    {
+        "id": "aacb46aa.0db2a8",
+        "type": "link in",
+        "z": "69658317.2e071c",
+        "name": "Initialize Stepper Location",
+        "links": [
+            "f6816573.7825a8"
+        ],
+        "x": 1435,
+        "y": 780,
+        "wires": [
+            [
+                "ffd5db2c.09c3e8"
+            ]
+        ]
+    },
+    {
+        "id": "f6816573.7825a8",
+        "type": "link out",
+        "z": "69658317.2e071c",
+        "name": "Initialize Stepper Location",
+        "links": [
+            "aacb46aa.0db2a8"
+        ],
+        "x": 1635,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "fb5d40d2.6b5be",
+        "type": "link in",
+        "z": "69658317.2e071c",
+        "name": "Post Drive Drive Wheel",
+        "links": [
+            "64bcdf3e.e3cfb"
+        ],
+        "x": 335,
+        "y": 80,
+        "wires": [
+            [
+                "ff407dc6.abdbf"
+            ]
+        ]
+    },
+    {
+        "id": "15dbb7d8.2b7f98",
+        "type": "inject",
+        "z": "69658317.2e071c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "8e907d72.0b0de"
+            ]
+        ]
+    },
+    {
+        "id": "8e907d72.0b0de",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "locationStopSensor",
+                "pt": "global",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d18eb831.0f1148",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "",
+        "property": "locationStopSensor",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 870,
+        "y": 280,
+        "wires": [
+            [
+                "61310bd4.e39134"
+            ],
+            [
+                "1ae8ac4e.1446e4"
+            ]
+        ]
+    },
+    {
+        "id": "2d5864c6.b03abc",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.locationCounter -= 4;\nmsg.payload = {};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 200,
+        "wires": [
+            [
+                "d98898ba.baee78"
+            ]
+        ]
+    },
+    {
+        "id": "61310bd4.e39134",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "",
+        "property": "timesLooped",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [
+                "2d5864c6.b03abc"
+            ],
+            [
+                "4ae72a18.2d0f34"
+            ]
+        ]
+    },
+    {
+        "id": "4ae72a18.2d0f34",
+        "type": "delay",
+        "z": "69658317.2e071c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1470,
+        "y": 240,
+        "wires": [
+            [
+                "3630a872.3dce28"
+            ]
+        ]
+    },
+    {
+        "id": "c38d4b09.4bb438",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.timesLooped++;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "d18eb831.0f1148"
+            ]
+        ]
+    },
+    {
+        "id": "d98898ba.baee78",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": false\n}\n    ",
+        "output": "json",
+        "x": 1330,
+        "y": 280,
+        "wires": [
+            [
+                "da31e577.32b9c8"
+            ]
+        ]
+    },
+    {
+        "id": "121fe37d.e8ca7d",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"default\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": true\n}\n    ",
+        "output": "json",
+        "x": 1450,
+        "y": 140,
+        "wires": [
+            [
+                "c76e63e0.cdfae"
+            ]
+        ]
+    },
+    {
+        "id": "1995720a.da08fe",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "var curLoc = global.get(\"driveLocation\");\nmsg.locationCounter = parseFloat(curLoc) + 2.5;\nmsg.payload = {};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1350,
+        "y": 80,
+        "wires": [
+            [
+                "121fe37d.e8ca7d",
+                "d5e01e01.64aa3"
+            ]
+        ]
+    },
+    {
+        "id": "c76e63e0.cdfae",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Move Drive Wheel",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1610,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9fe605f5.3669e8",
+        "type": "inject",
+        "z": "69658317.2e071c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1200,
+        "y": 80,
+        "wires": [
+            [
+                "1995720a.da08fe"
+            ]
+        ]
+    },
+    {
+        "id": "d5e01e01.64aa3",
+        "type": "debug",
+        "z": "69658317.2e071c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1560,
+        "y": 80,
+        "wires": []
+    }
+]

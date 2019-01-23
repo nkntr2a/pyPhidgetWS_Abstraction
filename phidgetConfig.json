@@ -163,38 +163,44 @@
     "LocomotionStopSensor": {
       "SerialNumber": 512594,
       "Channel": 0,
-      "VINTPort": 0,
+      "VINTPort": 1,
       "ipAddress": "192.168.1.211",
       "port": 5661,
       "serverName": "PhidgetSBC",
       "password": null,
       "Type": "DigitalInput",
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Boolean",
+      "ProximityEventTracker": "LocomotionLastFiveProximityEvents"
     },
     "ArmRotationStopSensor": {
-      "SerialNumber": 530286,
-      "Channel": 0,
-      "VINTPort": 4,
+      "SerialNumber": 512594,
+      "Channel": 2,
+      "VINTPort": 1,
       "ipAddress": "192.168.1.211",
       "port": 5661,
       "serverName": "PhidgetSBC",
       "password": null,
       "Type": "DigitalInput",
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Boolean",
+      "ProximityEventTracker": "ArmRotateLastFiveProximityEvents"
     },
     "ArmUpDownStopSensor": {
-      "SerialNumber": 530286,
-      "Channel": 0,
-      "VINTPort": 0,
+      "SerialNumber": 512594,
+      "Channel": 1,
+      "VINTPort": 1,
       "ipAddress": "192.168.1.211",
       "port": 5661,
       "serverName": "PhidgetSBC",
       "password": null,
       "Type": "DigitalInput",
       "isRemote": 1,
-      "webClientTemplate": "default"
+      "webClientTemplate": "default",
+      "units": "Boolean",
+      "ProximityEventTracker": "ArmUpDownLastFiveProximityEvents"
     },
     "SpinArm": {
       "SerialNumber": 530286,
@@ -276,6 +282,21 @@
         "Rotations": {
           "servicePath": "driveWheelRotations"
         }
+      },
+      "LocomotionStopSensor": {
+        "Boolean": {
+          "servicePath": "locationStopSensor"
+        }
+      },
+      "ArmUpDownStopSensor": {
+        "Boolean": {
+          "servicePath": "armUpDownStopSensor"
+        }
+      },
+      "ArmRotationStopSensor": {
+        "Boolean": {
+          "servicePath": "spinArmStopSensor"
+        }
       }
     }
   },
@@ -317,9 +338,9 @@
           "CurrentLimit": 3
         },
         "POST": {
-          "VelocityLimit": 1500,
-          "Acceleration": 500,
-          "CurrentLimit": 1
+          "VelocityLimit": 2500,
+          "Acceleration": 1000,
+          "CurrentLimit": 3
         }
       }
     }

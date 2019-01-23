@@ -1,0 +1,1375 @@
+[
+    {
+        "id": "94476480.9a63d8",
+        "type": "tab",
+        "label": "roboService",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fda86bfc.a68e28",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "humidityLevel",
+        "url": "/humidityLevel",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "180d352.e20e1cb"
+            ]
+        ]
+    },
+    {
+        "id": "180d352.e20e1cb",
+        "type": "http response",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "138f42d1.e029fd",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 830,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5ad10608.051088",
+        "type": "catch",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "scope": null,
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "8b969969.ddcc48"
+            ]
+        ]
+    },
+    {
+        "id": "8b969969.ddcc48",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d8c28323.c7c3f",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "temperature Great Room",
+        "url": "/temperatureGR",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "180d352.e20e1cb"
+            ]
+        ]
+    },
+    {
+        "id": "c2f79a3c.fc5638",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "extenderPosition",
+        "url": "/extenderPosition",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "7bc600b9.d0fd5"
+            ]
+        ]
+    },
+    {
+        "id": "262693ac.0bc7ac",
+        "type": "link out",
+        "z": "94476480.9a63d8",
+        "name": "Arm Extender",
+        "links": [
+            "dcdc92bc.b1747"
+        ],
+        "x": 1095,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7bc600b9.d0fd5",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.voltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 320,
+        "wires": [
+            [
+                "262693ac.0bc7ac"
+            ]
+        ]
+    },
+    {
+        "id": "4dbac604.bf5208",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "grabberPosition",
+        "url": "/grabberPosition",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "c3579a94.c10dc8",
+                "180d352.e20e1cb"
+            ]
+        ]
+    },
+    {
+        "id": "8022cd4d.a0fc6",
+        "type": "link out",
+        "z": "94476480.9a63d8",
+        "name": "Gripper Position",
+        "links": [
+            "81c5908a.fc293"
+        ],
+        "x": 1095,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c3579a94.c10dc8",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.voltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 360,
+        "wires": [
+            [
+                "8022cd4d.a0fc6"
+            ]
+        ]
+    },
+    {
+        "id": "302bd3a8.5e36bc",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 300,
+        "y": 880,
+        "wires": [
+            [
+                "ed715a91.911b48"
+            ]
+        ]
+    },
+    {
+        "id": "ed715a91.911b48",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "GET",
+        "ret": "obj",
+        "url": "localhost:5000/config",
+        "tls": "",
+        "x": 460,
+        "y": 880,
+        "wires": [
+            [
+                "45e1d5f3.f55e4c"
+            ]
+        ]
+    },
+    {
+        "id": "45e1d5f3.f55e4c",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 610,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "fc18e2d4.6ab85",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "arm Up Down Position Degrees",
+        "url": "/armUpDownDeg",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "f3fa52d6.6038e"
+            ]
+        ]
+    },
+    {
+        "id": "f3fa52d6.6038e",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.position",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 400,
+        "wires": [
+            [
+                "1cce82f9.db303d"
+            ]
+        ]
+    },
+    {
+        "id": "1cce82f9.db303d",
+        "type": "link out",
+        "z": "94476480.9a63d8",
+        "name": "ArmUpDown",
+        "links": [
+            "776bb718.79bd58"
+        ],
+        "x": 1095,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "37a6a1c6.9b879e",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "Spin Arm Position in Degrees",
+        "url": "/spinArmDeg",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "98d7a489.067838"
+            ]
+        ]
+    },
+    {
+        "id": "88f699b8.e6fe08",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "Drive Wheel Position in Rotations",
+        "url": "/driveWheelRotations",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "8db84633.b0cdc8"
+            ]
+        ]
+    },
+    {
+        "id": "98d7a489.067838",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.position",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 440,
+        "wires": [
+            [
+                "7fcb96ac.115238"
+            ]
+        ]
+    },
+    {
+        "id": "8db84633.b0cdc8",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.position",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [
+                "a63104be.a2c308",
+                "357c15de.daa0ba"
+            ]
+        ]
+    },
+    {
+        "id": "7fcb96ac.115238",
+        "type": "link out",
+        "z": "94476480.9a63d8",
+        "name": "Spin Arm Position",
+        "links": [
+            "205d87c6.077a88"
+        ],
+        "x": 1095,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a63104be.a2c308",
+        "type": "link out",
+        "z": "94476480.9a63d8",
+        "name": "Track Location",
+        "links": [
+            "b7da02fd.5eda7"
+        ],
+        "x": 1615,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d8157ce4.d29b",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "84be5f03.462e8"
+            ]
+        ]
+    },
+    {
+        "id": "f5e31698.839358",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/moveStepper",
+        "tls": "",
+        "x": 760,
+        "y": 940,
+        "wires": [
+            [
+                "f76293b5.327b8"
+            ]
+        ]
+    },
+    {
+        "id": "f76293b5.327b8",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 970,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "2f16d415.7f7e6c",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"ArmUpDownStepper\",\n    \"profile\": \"SlowAscend\",\n    \"position\": -45,\n    \"waitForMove\": true\n}\n",
+        "output": "json",
+        "x": 630,
+        "y": 940,
+        "wires": [
+            [
+                "f5e31698.839358"
+            ]
+        ]
+    },
+    {
+        "id": "69e904b3.55350c",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 420,
+        "y": 800,
+        "wires": [
+            [
+                "8a5121ce.83faf"
+            ]
+        ]
+    },
+    {
+        "id": "64875965.488b48",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/moveStepper",
+        "tls": "",
+        "x": 1260,
+        "y": 760,
+        "wires": [
+            [
+                "180d352.e20e1cb"
+            ]
+        ]
+    },
+    {
+        "id": "9d1680a.749578",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8a5121ce.83faf",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "Stepper Move Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{ \"device\": \"{{payload.moveCommand.device_name}}\", \"profile\": \"{{payload.moveCommand.profile}}\", \"position\": {{payload.moveCommand.position}}, \"waitForMove\": {{payload.moveCommand.moveSynchronous}} }\n",
+        "output": "json",
+        "x": 770,
+        "y": 760,
+        "wires": [
+            [
+                "64875965.488b48",
+                "138f42d1.e029fd"
+            ]
+        ]
+    },
+    {
+        "id": "d0634136.5d282",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Close Gripper",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1370,
+        "y": 160,
+        "wires": [
+            [
+                "784bfd28.9f1b64"
+            ]
+        ]
+    },
+    {
+        "id": "514122ed.72dd1c",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/moveLinearMotor",
+        "tls": "",
+        "x": 1820,
+        "y": 160,
+        "wires": [
+            [
+                "bd011a78.897128"
+            ]
+        ]
+    },
+    {
+        "id": "bd011a78.897128",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1970,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "784bfd28.9f1b64",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "Close",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"CloseGripper\",\n    \"profile\": \"POST\",\n    \"position\": 0,\n    \"waitForMove\": true\n}\n",
+        "output": "json",
+        "x": 1650,
+        "y": 160,
+        "wires": [
+            [
+                "514122ed.72dd1c"
+            ]
+        ]
+    },
+    {
+        "id": "c8668a1a.8fb958",
+        "type": "comment",
+        "z": "94476480.9a63d8",
+        "name": "Linear Motor Controls",
+        "info": "",
+        "x": 1380,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3acc2810.c789c8",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Open Gripper",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1370,
+        "y": 200,
+        "wires": [
+            [
+                "b3b1bea4.1f9f7"
+            ]
+        ]
+    },
+    {
+        "id": "95d328bc.235ad8",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/moveLinearMotor",
+        "tls": "",
+        "x": 1820,
+        "y": 200,
+        "wires": [
+            [
+                "778b4fb1.b0a61"
+            ]
+        ]
+    },
+    {
+        "id": "778b4fb1.b0a61",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1970,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b3b1bea4.1f9f7",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "Open",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"OpenGripper\",\n    \"profile\": \"POST\",\n    \"position\": 5,\n    \"waitForMove\": true\n}\n",
+        "output": "json",
+        "x": 1650,
+        "y": 200,
+        "wires": [
+            [
+                "95d328bc.235ad8"
+            ]
+        ]
+    },
+    {
+        "id": "4d11f85.ef9f508",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Hold Gripper",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1370,
+        "y": 240,
+        "wires": [
+            [
+                "283c2990.5b0506"
+            ]
+        ]
+    },
+    {
+        "id": "1f9f6076.98188",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Release Gripper",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1380,
+        "y": 280,
+        "wires": [
+            [
+                "283c2990.5b0506"
+            ]
+        ]
+    },
+    {
+        "id": "283c2990.5b0506",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "Set Gripper Hold",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"holdGripper\": {{payload}}\n}\n",
+        "output": "json",
+        "x": 1610,
+        "y": 260,
+        "wires": [
+            [
+                "8d31731a.7053b"
+            ]
+        ]
+    },
+    {
+        "id": "8d31731a.7053b",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/holdGripper",
+        "tls": "",
+        "x": 1820,
+        "y": 260,
+        "wires": [
+            [
+                "778b4fb1.b0a61"
+            ]
+        ]
+    },
+    {
+        "id": "d3b1348c.a11738",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Arm In",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1350,
+        "y": 80,
+        "wires": [
+            [
+                "4650f615.212d28"
+            ]
+        ]
+    },
+    {
+        "id": "d5259c28.f24dc",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/moveLinearMotor",
+        "tls": "",
+        "x": 1820,
+        "y": 80,
+        "wires": [
+            [
+                "9946f340.0b6ad"
+            ]
+        ]
+    },
+    {
+        "id": "9946f340.0b6ad",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1970,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4650f615.212d28",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "Arm In",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"ArmIn\",\n    \"profile\": \"POST\",\n    \"position\": {{payload}}\n}\n",
+        "output": "json",
+        "x": 1650,
+        "y": 80,
+        "wires": [
+            [
+                "d5259c28.f24dc"
+            ]
+        ]
+    },
+    {
+        "id": "32c93fdc.8be19",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Arm Out",
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1360,
+        "y": 120,
+        "wires": [
+            [
+                "5898706d.4c5c5"
+            ]
+        ]
+    },
+    {
+        "id": "83b65dee.dba66",
+        "type": "http request",
+        "z": "94476480.9a63d8",
+        "name": "getConfig",
+        "method": "POST",
+        "ret": "obj",
+        "url": "localhost:5000/moveLinearMotor",
+        "tls": "",
+        "x": 1820,
+        "y": 120,
+        "wires": [
+            [
+                "ed7c60b8.1937c"
+            ]
+        ]
+    },
+    {
+        "id": "ed7c60b8.1937c",
+        "type": "debug",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 1970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5898706d.4c5c5",
+        "type": "template",
+        "z": "94476480.9a63d8",
+        "name": "Open",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device\": \"ArmOut\",\n    \"profile\": \"POST\",\n    \"position\": {{payload}}\n}\n",
+        "output": "json",
+        "x": 1650,
+        "y": 120,
+        "wires": [
+            [
+                "83b65dee.dba66"
+            ]
+        ]
+    },
+    {
+        "id": "84be5f03.462e8",
+        "type": "function",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 510,
+        "y": 940,
+        "wires": [
+            [
+                "2f16d415.7f7e6c"
+            ]
+        ]
+    },
+    {
+        "id": "ca4ddf4c.0554e",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "4ccc4d75.4d95d4"
+            ]
+        ]
+    },
+    {
+        "id": "4ccc4d75.4d95d4",
+        "type": "actionflows",
+        "z": "94476480.9a63d8",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "StepperLocationInitialized",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 630,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b23ce1c2.1cbf8",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "moveStepper",
+        "url": "/moveStepper",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 410,
+        "y": 760,
+        "wires": [
+            [
+                "8a5121ce.83faf"
+            ]
+        ]
+    },
+    {
+        "id": "1108fe45.002ba2",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "Drive Wheel Location Stop Sensor",
+        "url": "/locationStopSensor",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 520,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "138f42d1.e029fd",
+                "d4e0169d.0173c8"
+            ]
+        ]
+    },
+    {
+        "id": "3de43e5a.6e1ee2",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "arm Up Down Stop Sensor",
+        "url": "/armUpDownStopSensor",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "138f42d1.e029fd",
+                "f9672b5a.ae4488"
+            ]
+        ]
+    },
+    {
+        "id": "ac31256.776f1d8",
+        "type": "http in",
+        "z": "94476480.9a63d8",
+        "name": "Spin Arm Stop Sensor",
+        "url": "/spinArmStopSensor",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 440,
+        "y": 600,
+        "wires": [
+            [
+                "180d352.e20e1cb",
+                "138f42d1.e029fd",
+                "bee61b9a.cfd688"
+            ]
+        ]
+    },
+    {
+        "id": "d4e0169d.0173c8",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.currentState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 520,
+        "wires": [
+            [
+                "da00586.b10c0a8"
+            ]
+        ]
+    },
+    {
+        "id": "f9672b5a.ae4488",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.currentState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 560,
+        "wires": [
+            [
+                "1b0871b5.13645e"
+            ]
+        ]
+    },
+    {
+        "id": "bee61b9a.cfd688",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.currentState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 600,
+        "wires": [
+            [
+                "20140527.b9ceda"
+            ]
+        ]
+    },
+    {
+        "id": "87efb64e.eafbf8",
+        "type": "inject",
+        "z": "94476480.9a63d8",
+        "name": "Post Locomotion Drive Wheel",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 340,
+        "y": 1060,
+        "wires": [
+            [
+                "64bcdf3e.e3cfb"
+            ]
+        ]
+    },
+    {
+        "id": "64bcdf3e.e3cfb",
+        "type": "link out",
+        "z": "94476480.9a63d8",
+        "name": "Post Drive Drive Wheel",
+        "links": [
+            "fb5d40d2.6b5be"
+        ],
+        "x": 775,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "da00586.b10c0a8",
+        "type": "switch",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 520,
+        "wires": [
+            [
+                "369b57ca.59c278"
+            ]
+        ]
+    },
+    {
+        "id": "8ab608bd.b96898",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "locationStopSensor",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1550,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b0871b5.13645e",
+        "type": "switch",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            [
+                "ca906e9e.00b1e"
+            ]
+        ]
+    },
+    {
+        "id": "ca906e9e.00b1e",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "armUpDownStopSensor",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20140527.b9ceda",
+        "type": "switch",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 600,
+        "wires": [
+            [
+                "fdd5ad5e.bbe21"
+            ]
+        ]
+    },
+    {
+        "id": "fdd5ad5e.bbe21",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "armRotationStopSensor",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "357c15de.daa0ba",
+        "type": "change",
+        "z": "94476480.9a63d8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "driveLocation",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "369b57ca.59c278",
+        "type": "function",
+        "z": "94476480.9a63d8",
+        "name": "Increment Location Stop Sensor",
+        "func": "var locationStopSensor = global.get(\"locationStopSensor\");\nlocationStopSensor++;\nglobal.set(\"locationStopSensor\", locationStopSensor);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1310,
+        "y": 520,
+        "wires": [
+            [
+                "9d1680a.749578"
+            ]
+        ]
+    }
+]
