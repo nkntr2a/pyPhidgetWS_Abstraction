@@ -309,9 +309,9 @@
           "CurrentLimit": 5
         },
         "POST": {
-          "VelocityLimit": 3000,
+          "VelocityLimit": 750,
           "Acceleration": 1000,
-          "CurrentLimit": 1
+          "CurrentLimit": 2
         },
         "SlowAscend": {
           "VelocityLimit": 3000,
@@ -326,9 +326,9 @@
           "CurrentLimit": 3
         },
         "POST": {
-          "VelocityLimit": 3000,
+          "VelocityLimit": 1000,
           "Acceleration": 1000,
-          "CurrentLimit": 1
+          "CurrentLimit": 1.5
         }
       },
       "Locomotion": {

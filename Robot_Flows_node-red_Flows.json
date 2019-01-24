@@ -21,8 +21,8 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 1560,
-        "y": 780,
+        "x": 1540,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -36,8 +36,8 @@
         "ret": "obj",
         "url": "localhost:5000/getStepperPosition",
         "tls": "",
-        "x": 900,
-        "y": 600,
+        "x": 880,
+        "y": 1440,
         "wires": [
             [
                 "dcaade81.8175d"
@@ -52,8 +52,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 240,
-        "y": 560,
+        "x": 220,
+        "y": 1400,
         "wires": [
             [
                 "60b28216.a438bc"
@@ -79,8 +79,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 560,
+        "x": 460,
+        "y": 1400,
         "wires": [
             [
                 "81813454.942a58"
@@ -98,8 +98,8 @@
         "syntax": "mustache",
         "template": "{\n    \"device\": \"{{payload}}\"\n}\n",
         "output": "json",
-        "x": 650,
-        "y": 560,
+        "x": 630,
+        "y": 1400,
         "wires": [
             [
                 "eb40ea0.1b52a18"
@@ -112,8 +112,8 @@
         "z": "69658317.2e071c",
         "name": "action out",
         "links": [],
-        "x": 1460,
-        "y": 620,
+        "x": 1440,
+        "y": 1460,
         "wires": []
     },
     {
@@ -124,8 +124,8 @@
         "func": "var dict = global.get(\"stepperLocation\");\ndict[msg.payload.device_name] = msg.payload.position;\nglobal.set(\"stepperLocation\", dict);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1200,
-        "y": 600,
+        "x": 1180,
+        "y": 1440,
         "wires": [
             [
                 "9fd07713.2a3718"
@@ -140,8 +140,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 230,
-        "y": 600,
+        "x": 210,
+        "y": 1440,
         "wires": [
             [
                 "bb15ddcb.19b65"
@@ -167,8 +167,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 600,
+        "x": 420,
+        "y": 1440,
         "wires": [
             [
                 "d34e02e.d9128"
@@ -186,8 +186,8 @@
         "syntax": "mustache",
         "template": "{\n    \"device\": \"{{payload}}\"\n}\n",
         "output": "json",
-        "x": 650,
-        "y": 600,
+        "x": 630,
+        "y": 1440,
         "wires": [
             [
                 "eb40ea0.1b52a18"
@@ -202,8 +202,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 240,
-        "y": 640,
+        "x": 220,
+        "y": 1480,
         "wires": [
             [
                 "16e5c062.ee83a"
@@ -229,8 +229,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
-        "y": 640,
+        "x": 430,
+        "y": 1480,
         "wires": [
             [
                 "3f3bd8bc.6e3018"
@@ -248,8 +248,8 @@
         "syntax": "mustache",
         "template": "{\n    \"device\": \"{{payload}}\"\n}\n",
         "output": "json",
-        "x": 650,
-        "y": 640,
+        "x": 630,
+        "y": 1480,
         "wires": [
             [
                 "eb40ea0.1b52a18"
@@ -264,8 +264,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 910,
-        "y": 640,
+        "x": 890,
+        "y": 1480,
         "wires": [
             [
                 "83618c9a.305ad"
@@ -290,8 +290,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1130,
-        "y": 640,
+        "x": 1110,
+        "y": 1480,
         "wires": [
             [
                 "9fd07713.2a3718"
@@ -310,8 +310,8 @@
         "func": "global.set(\"stepperLocation\", {});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1440,
-        "y": 660,
+        "x": 1420,
+        "y": 1500,
         "wires": [
             [
                 "f6816573.7825a8"
@@ -333,8 +333,8 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 1170,
-        "y": 140,
+        "x": 1010,
+        "y": 640,
         "wires": [
             [
                 "1995720a.da08fe"
@@ -349,8 +349,8 @@
         "priority": "50",
         "links": [],
         "scope": "global",
-        "x": 560,
-        "y": 280,
+        "x": 400,
+        "y": 780,
         "wires": [
             [
                 "c38d4b09.4bb438"
@@ -363,28 +363,9 @@
         "z": "69658317.2e071c",
         "name": "action out",
         "links": [],
-        "x": 1700,
-        "y": 260,
+        "x": 1540,
+        "y": 760,
         "wires": []
-    },
-    {
-        "id": "5ada9b28.563b24",
-        "type": "template",
-        "z": "69658317.2e071c",
-        "name": "",
-        "field": "payload.moveCommand",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": true\n}\n    ",
-        "output": "json",
-        "x": 1330,
-        "y": 320,
-        "wires": [
-            [
-                "da31e577.32b9c8"
-            ]
-        ]
     },
     {
         "id": "ff407dc6.abdbf",
@@ -401,8 +382,8 @@
         "scope": "global",
         "perf": false,
         "seq": false,
-        "x": 520,
-        "y": 140,
+        "x": 360,
+        "y": 640,
         "wires": [
             [
                 "f377eea9.905f2"
@@ -442,8 +423,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 140,
+        "x": 580,
+        "y": 640,
         "wires": [
             [
                 "bc35678c.93caa8"
@@ -459,8 +440,8 @@
         "ret": "txt",
         "url": "localhost:1880/moveStepper",
         "tls": "",
-        "x": 1510,
-        "y": 320,
+        "x": 1350,
+        "y": 820,
         "wires": [
             [
                 "3630a872.3dce28"
@@ -472,14 +453,14 @@
         "type": "function",
         "z": "69658317.2e071c",
         "name": "",
-        "func": "if (msg.smallSteps === 0) {\n    var curLoc = global.get(\"driveLocation\");\n    msg.locationCounter = curLoc - 0.2;\n    msg.smallSteps++;\n}\nmsg.locationCounter -= 0.07;\nmsg.payload = {};\nreturn msg;",
+        "func": "if (msg.smallSteps === 0) {\n    var curLoc = global.get(\"driveLocation\");\n    msg.locationCounter = parseFloat(curLoc) - 0.2;\n    msg.smallSteps++;\n}\nmsg.locationCounter -= 0.07;\nmsg.payload = {};\nmsg.synchronous = true;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1150,
-        "y": 320,
+        "x": 990,
+        "y": 820,
         "wires": [
             [
-                "5ada9b28.563b24"
+                "d98898ba.baee78"
             ]
         ]
     },
@@ -491,8 +472,8 @@
         "links": [
             "f6816573.7825a8"
         ],
-        "x": 1435,
-        "y": 780,
+        "x": 1415,
+        "y": 1620,
         "wires": [
             [
                 "ffd5db2c.09c3e8"
@@ -507,8 +488,8 @@
         "links": [
             "aacb46aa.0db2a8"
         ],
-        "x": 1635,
-        "y": 660,
+        "x": 1615,
+        "y": 1500,
         "wires": []
     },
     {
@@ -519,57 +500,12 @@
         "links": [
             "64bcdf3e.e3cfb"
         ],
-        "x": 335,
-        "y": 80,
+        "x": 155,
+        "y": 640,
         "wires": [
             [
                 "ff407dc6.abdbf"
             ]
-        ]
-    },
-    {
-        "id": "15dbb7d8.2b7f98",
-        "type": "inject",
-        "z": "69658317.2e071c",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 720,
-        "y": 380,
-        "wires": [
-            [
-                "8e907d72.0b0de"
-            ]
-        ]
-    },
-    {
-        "id": "8e907d72.0b0de",
-        "type": "change",
-        "z": "69658317.2e071c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "locationStopSensor",
-                "pt": "global",
-                "to": "0",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 970,
-        "y": 380,
-        "wires": [
-            []
         ]
     },
     {
@@ -586,16 +522,16 @@
                 "vt": "str"
             },
             {
-                "t": "eq",
+                "t": "gte",
                 "v": "1",
                 "vt": "str"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 870,
-        "y": 280,
+        "x": 710,
+        "y": 780,
         "wires": [
             [
                 "61310bd4.e39134"
@@ -610,11 +546,11 @@
         "type": "function",
         "z": "69658317.2e071c",
         "name": "",
-        "func": "msg.locationCounter -= 4;\nmsg.payload = {};\nreturn msg;",
+        "func": "msg.locationCounter -= 4;\nmsg.payload = {};\nmsg.synchronous = false;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1170,
-        "y": 200,
+        "x": 1010,
+        "y": 700,
         "wires": [
             [
                 "d98898ba.baee78"
@@ -641,8 +577,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1050,
-        "y": 240,
+        "x": 890,
+        "y": 740,
         "wires": [
             [
                 "2d5864c6.b03abc"
@@ -667,8 +603,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 1470,
-        "y": 240,
+        "x": 1310,
+        "y": 740,
         "wires": [
             [
                 "3630a872.3dce28"
@@ -683,8 +619,8 @@
         "func": "msg.timesLooped++;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 720,
-        "y": 280,
+        "x": 560,
+        "y": 780,
         "wires": [
             [
                 "d18eb831.0f1148"
@@ -700,10 +636,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": false\n}\n    ",
+        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
         "output": "json",
-        "x": 1330,
-        "y": 280,
+        "x": 1170,
+        "y": 780,
         "wires": [
             [
                 "da31e577.32b9c8"
@@ -719,10 +655,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"default\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": true\n}\n    ",
+        "template": "{\n    \"device_name\": \"Locomotion\",\n    \"profile\": \"default\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
         "output": "json",
-        "x": 1450,
-        "y": 140,
+        "x": 1290,
+        "y": 640,
         "wires": [
             [
                 "c76e63e0.cdfae"
@@ -734,15 +670,14 @@
         "type": "function",
         "z": "69658317.2e071c",
         "name": "",
-        "func": "var curLoc = global.get(\"driveLocation\");\nmsg.locationCounter = parseFloat(curLoc) + 2.5;\nmsg.payload = {};\nreturn msg;",
+        "func": "var curLoc = global.get(\"driveLocation\");\nmsg.locationCounter = parseFloat(curLoc) + 2.5;\nmsg.payload = {};\nmsg.synchronous = true;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1350,
-        "y": 80,
+        "x": 1170,
+        "y": 640,
         "wires": [
             [
-                "121fe37d.e8ca7d",
-                "d5e01e01.64aa3"
+                "121fe37d.e8ca7d"
             ]
         ]
     },
@@ -755,30 +690,10 @@
         "ret": "txt",
         "url": "localhost:1880/moveStepper",
         "tls": "",
-        "x": 1610,
-        "y": 140,
+        "x": 1450,
+        "y": 640,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "9fe605f5.3669e8",
-        "type": "inject",
-        "z": "69658317.2e071c",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 1200,
-        "y": 80,
-        "wires": [
-            [
-                "1995720a.da08fe"
-            ]
         ]
     },
     {
@@ -791,8 +706,850 @@
         "console": false,
         "tostatus": false,
         "complete": "true",
-        "x": 1560,
-        "y": 80,
+        "x": 1150,
+        "y": 580,
         "wires": []
+    },
+    {
+        "id": "73185f61.eda88",
+        "type": "link in",
+        "z": "69658317.2e071c",
+        "name": "Post Spin Arm Stepper",
+        "links": [
+            "b5ad0da1.ae132"
+        ],
+        "x": 135,
+        "y": 900,
+        "wires": [
+            [
+                "475badcb.5178b4"
+            ]
+        ]
+    },
+    {
+        "id": "475badcb.5178b4",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "StepperLocation.SpinArm",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "441da189.e11bf"
+            ]
+        ]
+    },
+    {
+        "id": "441da189.e11bf",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "locationCounter",
+                "pt": "msg",
+                "to": "stepperLocation.SpinArm",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "timesLooped",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "smallSteps",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 900,
+        "wires": [
+            [
+                "44f9d193.91972"
+            ]
+        ]
+    },
+    {
+        "id": "44f9d193.91972",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "global",
+        "name": "FindStop_SpinArm",
+        "prop": "spinArmStopSensor",
+        "untilprop": "2",
+        "until": "gte",
+        "loop": "watch",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 690,
+        "y": 900,
+        "wires": [
+            [
+                "a30cfb28.a4b108"
+            ]
+        ]
+    },
+    {
+        "id": "6a4c2214.fcd4ac",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "FindStop_SpinArm",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 210,
+        "y": 1080,
+        "wires": [
+            [
+                "e8c12153.b8c3d"
+            ]
+        ]
+    },
+    {
+        "id": "9e70e17.2b17f2",
+        "type": "actionflows_out",
+        "z": "69658317.2e071c",
+        "name": "action out",
+        "links": [],
+        "x": 1880,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "e8c12153.b8c3d",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.timesLooped++;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 1080,
+        "wires": [
+            [
+                "d1833c3f.848fb"
+            ]
+        ]
+    },
+    {
+        "id": "56219add.d61b64",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"SpinArm\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
+        "output": "json",
+        "x": 1210,
+        "y": 1100,
+        "wires": [
+            [
+                "b0dfba9a.d557b8"
+            ]
+        ]
+    },
+    {
+        "id": "b0dfba9a.d557b8",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Spin Arm",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1380,
+        "y": 1100,
+        "wires": [
+            [
+                "9e70e17.2b17f2"
+            ]
+        ]
+    },
+    {
+        "id": "d1833c3f.848fb",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "",
+        "property": "spinArmStopSensor",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 510,
+        "y": 1080,
+        "wires": [
+            [
+                "3dc0819a.ac011e"
+            ],
+            [
+                "757bcf19.b5873"
+            ]
+        ]
+    },
+    {
+        "id": "3dc0819a.ac011e",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "",
+        "property": "timesLooped",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 1060,
+        "wires": [
+            [
+                "549aeb57.7f5de4"
+            ],
+            [
+                "233a8a7a.6bca46"
+            ]
+        ]
+    },
+    {
+        "id": "549aeb57.7f5de4",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.locationCounter += 300;\nmsg.payload = {};\nmsg.synchronous = false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 1020,
+        "wires": [
+            [
+                "56219add.d61b64"
+            ]
+        ]
+    },
+    {
+        "id": "233a8a7a.6bca46",
+        "type": "delay",
+        "z": "69658317.2e071c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1190,
+        "y": 1160,
+        "wires": [
+            [
+                "9e70e17.2b17f2"
+            ]
+        ]
+    },
+    {
+        "id": "757bcf19.b5873",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "if (msg.smallSteps === 0) {\n    var curLoc = global.get(\"spinArmLocation\");\n    msg.locationCounter = parseFloat(curLoc) + 13;\n}\nmsg.smallSteps++;\nmsg.locationCounter += 5;\nmsg.payload = {};\nmsg.synchronous = true;\nif (msg.smallSteps >= 7) {\n    global.set(\"spinArmStopSensor\", 0);\n    msg.smallSteps = 0;\n    msg.locationCounter = 300;\n    msg.synchronous = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 790,
+        "y": 1160,
+        "wires": [
+            [
+                "56219add.d61b64"
+            ]
+        ]
+    },
+    {
+        "id": "a30cfb28.a4b108",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "var curLoc = global.get(\"spinArmLocation\");\nmsg.locationCounter = parseFloat(curLoc) - 163;\nmsg.payload = {};\nmsg.synchronous = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 850,
+        "y": 900,
+        "wires": [
+            [
+                "ed902ef9.44742"
+            ]
+        ]
+    },
+    {
+        "id": "ed902ef9.44742",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"SpinArm\",\n    \"profile\": \"default\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
+        "output": "json",
+        "x": 970,
+        "y": 900,
+        "wires": [
+            [
+                "930ffc5b.3cf11"
+            ]
+        ]
+    },
+    {
+        "id": "930ffc5b.3cf11",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Spin Arm",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1100,
+        "y": 900,
+        "wires": [
+            [
+                "683ae504.0c84cc"
+            ]
+        ]
+    },
+    {
+        "id": "6dded316.49759c",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "global",
+        "name": "FindStop_Release_Spinarm",
+        "prop": "spinArmStopReleaseSensor",
+        "untilprop": "1",
+        "until": "gte",
+        "loop": "watch",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 1480,
+        "y": 900,
+        "wires": [
+            [
+                "6e8f276a.bac338"
+            ]
+        ]
+    },
+    {
+        "id": "683ae504.0c84cc",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "spinArmStopSensor",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "spinArmStopReleaseSensor",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1260,
+        "y": 900,
+        "wires": [
+            [
+                "6dded316.49759c"
+            ]
+        ]
+    },
+    {
+        "id": "4990c9c.a72c738",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "FindStop_Release_Spinarm",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 1220,
+        "y": 1040,
+        "wires": [
+            [
+                "7b0d4e50.5e79d"
+            ]
+        ]
+    },
+    {
+        "id": "7b0d4e50.5e79d",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.locationCounter -= 2;\nmsg.payload = {};\nmsg.synchronous = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1410,
+        "y": 1040,
+        "wires": [
+            [
+                "1c024ffd.dc063"
+            ]
+        ]
+    },
+    {
+        "id": "1c024ffd.dc063",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"SpinArm\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
+        "output": "json",
+        "x": 1530,
+        "y": 1040,
+        "wires": [
+            [
+                "851fb549.7ee348"
+            ]
+        ]
+    },
+    {
+        "id": "851fb549.7ee348",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Spin Arm",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1660,
+        "y": 1040,
+        "wires": [
+            [
+                "9e70e17.2b17f2"
+            ]
+        ]
+    },
+    {
+        "id": "6e8f276a.bac338",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.locationCounter += 5.5;\nmsg.payload = {};\nmsg.synchronous = true;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1670,
+        "y": 900,
+        "wires": [
+            [
+                "ee144bbb.5f7fb8"
+            ]
+        ]
+    },
+    {
+        "id": "ee144bbb.5f7fb8",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"SpinArm\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
+        "output": "json",
+        "x": 1790,
+        "y": 900,
+        "wires": [
+            [
+                "e360d6a0.af9678"
+            ]
+        ]
+    },
+    {
+        "id": "e360d6a0.af9678",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Spin Arm",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1820,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1cf1a4e2.ebef5b",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "StepperLocation.ArmUpDownStepper",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 390,
+        "y": 440,
+        "wires": [
+            [
+                "caa1336c.c6bfd"
+            ]
+        ]
+    },
+    {
+        "id": "caa1336c.c6bfd",
+        "type": "change",
+        "z": "69658317.2e071c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "locationCounter",
+                "pt": "msg",
+                "to": "stepperLocation.ArmUpDownStepper",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "timesLooped",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "smallSteps",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 440,
+        "wires": [
+            [
+                "9aec36ea.55ccb8"
+            ]
+        ]
+    },
+    {
+        "id": "b27020ec.5fdc2",
+        "type": "link in",
+        "z": "69658317.2e071c",
+        "name": "Post Arm Up-Down",
+        "links": [
+            "2444671b.436228"
+        ],
+        "x": 155,
+        "y": 440,
+        "wires": [
+            [
+                "1cf1a4e2.ebef5b"
+            ]
+        ]
+    },
+    {
+        "id": "445d9006.d9548",
+        "type": "actionflows_in",
+        "z": "69658317.2e071c",
+        "name": "FindStop_ArmUpDown",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "eab8ee17.f20e6"
+            ]
+        ]
+    },
+    {
+        "id": "eab8ee17.f20e6",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.timesLooped++;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "5591d253.435bcc"
+            ]
+        ]
+    },
+    {
+        "id": "5591d253.435bcc",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "",
+        "property": "armUpDownStopSensor",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "gte",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 500,
+        "wires": [
+            [
+                "7eab4771.76d4f8"
+            ],
+            [
+                "f462af52.b6d42"
+            ]
+        ]
+    },
+    {
+        "id": "7eab4771.76d4f8",
+        "type": "switch",
+        "z": "69658317.2e071c",
+        "name": "",
+        "property": "timesLooped",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "ab6d0f6b.d208e"
+            ],
+            [
+                "cf2aa966.87e638"
+            ]
+        ]
+    },
+    {
+        "id": "cb23cc05.8955a",
+        "type": "actionflows_out",
+        "z": "69658317.2e071c",
+        "name": "action out",
+        "links": [],
+        "x": 1540,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "cf2aa966.87e638",
+        "type": "delay",
+        "z": "69658317.2e071c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [
+                "cb23cc05.8955a"
+            ]
+        ]
+    },
+    {
+        "id": "ab6d0f6b.d208e",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "msg.locationCounter -= 300;\nmsg.payload = {};\nmsg.synchronous = false;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 480,
+        "wires": [
+            [
+                "22e3e237.fdd7de"
+            ]
+        ]
+    },
+    {
+        "id": "22e3e237.fdd7de",
+        "type": "template",
+        "z": "69658317.2e071c",
+        "name": "",
+        "field": "payload.moveCommand",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"device_name\": \"ArmUpDownStepper\",\n    \"profile\": \"POST\",\n    \"position\":{{locationCounter}},\n    \"moveSynchronous\": {{synchronous}}\n}\n    ",
+        "output": "json",
+        "x": 990,
+        "y": 480,
+        "wires": [
+            [
+                "c8b8cb19.7dfd28",
+                "d5e01e01.64aa3"
+            ]
+        ]
+    },
+    {
+        "id": "c8b8cb19.7dfd28",
+        "type": "http request",
+        "z": "69658317.2e071c",
+        "name": "Arm Up-Down",
+        "method": "POST",
+        "ret": "txt",
+        "url": "localhost:1880/moveStepper",
+        "tls": "",
+        "x": 1220,
+        "y": 460,
+        "wires": [
+            [
+                "863558e.0665fa8"
+            ]
+        ]
+    },
+    {
+        "id": "f462af52.b6d42",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "if (msg.smallSteps === 0) {\n    var curLoc = global.get(\"armUpDownLocation\");\n    msg.locationCounter = parseFloat(curLoc) + 5;\n}\nmsg.smallSteps++;\nmsg.locationCounter -= 1;\nmsg.synchronous = true;\nmsg.payload = {};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 540,
+        "wires": [
+            [
+                "22e3e237.fdd7de"
+            ]
+        ]
+    },
+    {
+        "id": "863558e.0665fa8",
+        "type": "function",
+        "z": "69658317.2e071c",
+        "name": "",
+        "func": "if (msg.smallSteps === 1) {\n    global.set(\"armUpDownStopSensor\", 1);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1390,
+        "y": 460,
+        "wires": [
+            [
+                "cb23cc05.8955a"
+            ]
+        ]
+    },
+    {
+        "id": "9aec36ea.55ccb8",
+        "type": "actionflows",
+        "z": "69658317.2e071c",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "global",
+        "name": "FindStop_ArmUpDown",
+        "prop": "armUpDownStopSensor",
+        "untilprop": "2",
+        "until": "gte",
+        "loop": "watch",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 980,
+        "y": 360,
+        "wires": [
+            []
+        ]
     }
 ]
